@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HER BASE｜アスリートの妻の自己実現支援プラットフォーム</title>
+    <meta name="description" content="HER BASEは、アスリートの妻が「夫の影」から抜け出し、自らの人生の主導権を握るためのプラットフォーム。メンタルケア・金融リテラシー・キャリア機会を提供します。" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="/favicon.png" />
+    <meta name="theme-color" content="#b78829" />
+
+    <!-- OGP -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="HER BASE｜アスリートの妻の自己実現支援プラットフォーム" />
+    <meta property="og:description" content="夫の影ではなく、私の人生を生きる。アスリートの妻のためのメンタルケア・金融リテラシー・キャリア支援プラットフォーム。" />
+    <meta property="og:image" content="/favicon-512.png" />
+    <meta name="twitter:card" content="summary" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // ロゴのゴールドを基準にしたブランドカラー
+              gold: {
+                50:  '#faf3e2',
+                100: '#f3e6c4',
+                200: '#e8cf94',
+                300: '#dab765',
+                400: '#c9a044',
+                500: '#b78829', // HER BASE ロゴのゴールド
+                600: '#9e7323',
+                700: '#7d591f',
+                800: '#63471d',
+                900: '#523c1b',
+              },
+              // ロゴ背景のアイボリー/クリーム
+              cream: {
+                50:  '#fdf8ef',
+                100: '#fbf1e1',
+                200: '#f6e6cd',
+                300: '#efd8b4',
+                400: '#e5c795',
+              },
+              // ウォームな黒（エスプレッソ）
+              ink: {
+                DEFAULT: '#221a10',
+                900: '#221a10',
+                800: '#2e2417',
+                700: '#3d3120',
+              },
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', '"Shippori Mincho"', 'serif'],
+              sans: ['"Zen Kaku Gothic New"', 'sans-serif'],
+              mincho: ['"Shippori Mincho"', 'serif'],
+              cinzel: ['"Cinzel"', 'serif'],
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Zen Kaku Gothic New', sans-serif;
+        background-color: #fdf8ef;
+      }
+      .font-cinzel { font-family: 'Cinzel', serif; }
+      .font-mincho { font-family: 'Shippori Mincho', serif; }
+      .animate-fade-in {
+        animation: fadeIn 1s ease-out forwards;
+        opacity: 0;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .stroke-text {
+        -webkit-text-stroke: 1px #b78829;
+        color: transparent;
+      }
+      ::selection { background: #e8cf94; color: #523c1b; }
+    </style>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+  </body>
+</html>
