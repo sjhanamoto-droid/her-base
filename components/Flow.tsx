@@ -4,7 +4,7 @@ import { Smartphone, MessageCircleHeart, ShieldCheck, Sparkles } from 'lucide-re
 
 const Flow: React.FC = () => {
   const steps = [
-    { icon: <Smartphone className="w-8 h-8" />, title: 'お申し込み', desc: 'ホームページのフォーム（またはメール）から、かんたんにお申し込み。' },
+    { icon: <Smartphone className="w-8 h-8" />, title: 'まずはご相談', desc: '専用フォームから、いまのお気持ちやお悩みをかんたんにお聞かせください。' },
     { icon: <MessageCircleHeart className="w-8 h-8" />, title: '面談', desc: 'オンラインで面談。あなたの想いやご状況を、丁寧にお伺いします。' },
     { icon: <ShieldCheck className="w-8 h-8" />, title: '審査', desc: 'アスリートを支える立場であることを確認のうえ、審査を行います。' },
     { icon: <Sparkles className="w-8 h-8" />, title: 'ご入会', desc: '有料会員として本入会。安心できるコミュニティへ、ようこそ。' },

@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
 
             <div style={ease(0.85)}>
               <Button variant="ink" size="lg" withArrow>
-                入会について知る
+                お悩みをお聞かせください
               </Button>
             </div>
           </div>

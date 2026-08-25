@@ -25,11 +25,12 @@ const Join: React.FC = () => {
               <span className="inline-block self-start bg-gold-500 text-white text-xs font-bold px-3 py-1 uppercase font-cinzel tracking-wider mb-6">
                 Now Accepting
               </span>
-              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-4">まずは、面談から。</h3>
+              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-4">まずは、お悩みをお聞かせください。</h3>
               <p className="text-cream-200/70 leading-relaxed">
                 HER BASE は、アスリートを支える人のための審査制コミュニティです。
-                ホームページからのお申し込み後、面談・審査を経てご入会いただきます。
-                <span className="text-gold-300 font-bold">お申し込み・面談は無料</span>です。
+                まずは専用フォームから、いまのお気持ちやお悩みをお聞かせください。
+                内容を拝見したうえで、面談・審査を経てご入会いただきます。
+                <span className="text-gold-300 font-bold">ご相談・面談は無料</span>です。
               </p>
             </div>
 
@@ -51,13 +52,13 @@ const Join: React.FC = () => {
         </div>
 
         <div className="text-center mt-16">
-          <a href={PREREGISTER_URL}>
+          <a href={PREREGISTER_URL} target="_blank" rel="noopener noreferrer">
             <Button variant="gold" size="xl" withArrow onClick={() => {}}>
-              入会を申し込む
+              お悩みをお聞かせください
             </Button>
           </a>
           <p className="mt-4 text-sm text-cream-200/50">
-            メールソフトが起動します（公式LINE・専用フォームは準備中です）
+            Googleフォームが開きます（ご相談・面談は無料です）
           </p>
         </div>
       </div>

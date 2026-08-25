@@ -48,9 +48,11 @@ const Header: React.FC = () => {
             ))}
             <a
               href={PREREGISTER_URL}
-              className="bg-ink text-cream-50 px-6 py-2.5 text-sm font-cinzel font-bold tracking-[0.15em] hover:bg-gold-500 transition-colors uppercase"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-ink text-cream-50 px-6 py-2.5 text-sm font-cinzel font-bold tracking-[0.15em] hover:bg-gold-500 transition-colors"
             >
-              Pre-Register
+              お悩み相談
             </a>
           </nav>
 
@@ -80,10 +82,12 @@ const Header: React.FC = () => {
           <div className="mt-8">
             <a
               href={PREREGISTER_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block text-center w-full bg-ink text-cream-50 py-4 text-lg font-cinzel font-bold tracking-[0.15em] uppercase"
+              className="block text-center w-full bg-ink text-cream-50 py-4 text-lg font-cinzel font-bold tracking-[0.15em]"
             >
-              Pre-Register
+              お悩み相談
             </a>
           </div>
         </div>
