@@ -9,10 +9,19 @@ export const REP_TITLE = 'HER BASE 代表';
 // TODO: 代表者様のお名前に差し替えてください
 export const REP_NAME = '◯◯　◯◯';
 
-// 事前登録・お問い合わせの導線
+// 入会申し込み・お問い合わせの導線
 // 公式LINEやフォームが用意でき次第、PREREGISTER_URL を差し替えてください。
-export const PREREGISTER_URL =
-  'mailto:info@sjdesign.jp?subject=HER%20BASE%20%E4%BA%8B%E5%89%8D%E7%99%BB%E9%8C%B2%E5%B8%8C%E6%9C%9B&body=%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0D%0A%E3%81%94%E9%80%A3%E7%B5%A1%E5%85%88%EF%BC%9A%0D%0A%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%EF%BC%9A%0D%0A';
+const MAIL_SUBJECT = 'HER BASE 入会申し込み';
+const MAIL_BODY = [
+  'お名前（ニックネーム可）：',
+  'ご連絡先：',
+  '支えている競技・ご関係（例：夫がプロ野球選手 など）：',
+  'ご相談・メッセージ：',
+  '',
+].join('\r\n');
 
-// ページ内の事前登録セクションへスクロール
+export const PREREGISTER_URL =
+  `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(MAIL_SUBJECT)}&body=${encodeURIComponent(MAIL_BODY)}`;
+
+// ページ内の入会申し込みセクションへスクロール
 export const JOIN_ANCHOR = '#join';

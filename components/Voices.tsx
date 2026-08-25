@@ -3,10 +3,10 @@ import { Quote } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 
 const voices = [
-  { text: '夫はすごい。でも、私には一体、何が残るんだろう。', tag: 'アスリートの妻・30代' },
-  { text: 'もし夫が怪我をしたら——。お金のことを考えると、夜、眠れなくなる。', tag: 'アスリートの妻・20代' },
-  { text: '「◯◯選手の奥さん」ではなく、私自身の名前で呼ばれたい。', tag: 'アスリートの妻・30代' },
-  { text: '本当は、私にもやりたいことがあったはずなのに、いつの間にか。', tag: 'アスリートの妻・40代' },
+  { text: 'この気持ちは、同じ立場の人にしか分からない気がして。', tag: 'アスリートを支える方・30代' },
+  { text: 'まわりに相談できる人が、なかなかいなかった。', tag: 'アスリートを支える方・20代' },
+  { text: '夫のことは誰にも話せなくて、ずっと一人で抱えていました。', tag: 'アスリートを支える方・30代' },
+  { text: '同じ環境の人と、ただ話せる。それだけで、こんなに安心するなんて。', tag: 'アスリートを支える方・40代' },
 ];
 
 const Voices: React.FC = () => {
@@ -19,8 +19,8 @@ const Voices: React.FC = () => {
             <p className="text-gold-700 font-bold mt-3 font-serif text-lg">その声に、応えたい。</p>
           </div>
           <p className="text-stone-500 max-w-md text-sm leading-relaxed">
-            これは、アスリートの妻が心の奥にそっと抱えている想いです。
-            HER BASE は、この一つひとつの声に向き合うために生まれました。
+            これは、アスリートを支える人が心の奥にそっと抱えている想いです。
+            HER BASE は、この一つひとつの声に応えるために生まれました。
           </p>
         </AnimatedSection>
 

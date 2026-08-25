@@ -5,9 +5,9 @@ import AnimatedBackgroundGradient from './AnimatedBackgroundGradient';
 
 const Concept: React.FC = () => {
   const pillars = [
-    { title: 'MENTAL CARE', jp: '心のケア', desc: '夫の競技成績に揺れない、自分軸の心の土台を育てる' },
-    { title: 'FINANCIAL', jp: '金融リテラシー', desc: '将来のお金の不安を、正しい知識で「自信」に変える' },
-    { title: 'SELF-REALIZATION', jp: '自己実現', desc: '「私のやりたい」を見つけ、キャリアとして形にする' },
+    { title: 'SAFE PLACE', jp: '安心できる居場所', desc: '審査制・ニックネーム参加。アスリートを支える人だけが集う、閉じた安心の場所。' },
+    { title: 'CONNECTION', jp: '同じ立場のつながり', desc: '同じ環境にいる仲間だから、本音で話せる。「自分だけじゃない」と思える。' },
+    { title: 'A STEP FORWARD', jp: '前へ進むきっかけ', desc: '体験のシェアや専門家の知恵から、今よりよくなるヒントと一歩踏み出す勇気を。' },
   ];
 
   return (
@@ -18,25 +18,25 @@ const Concept: React.FC = () => {
           <AnimatedSection direction="right" delay={0.2} className="p-8 md:p-12 lg:p-24 flex flex-col justify-center border-r border-black/10 bg-cream-50">
             <p className="font-cinzel text-gold-600 tracking-[0.25em] text-sm mb-6 uppercase">The Challenge</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight mb-10 text-ink">
-              その幸せは、<br />
-              <span className="text-gold-600">夫の成功</span>に<br />
-              依存していませんか。
+              支える立場だから、<br />
+              <span className="text-gold-600">言えなかった</span><br />
+              気持ち。
             </h2>
             <div className="space-y-8 max-w-lg">
               <AnimatedSection direction="up" delay={0.4}>
                 <p className="text-base md:text-lg font-medium leading-relaxed text-stone-700">
-                  夫が夢を叶え、輝いていく。<br />
-                  その隣で、いつの間にか自分のキャリアを止め、
-                  「◯◯選手の奥さん」として生きてきた——。
-                  夫のキャリアは、怪我や契約終了という一本の電話で、
-                  突然断たれるかもしれない。その不安は、いつもあなたの心の片隅にあります。
+                  アスリートを支える毎日は、誇らしい。<br />
+                  でもその一方で、試合の重圧や将来のこと、揺れ動く生活——
+                  まわりにはなかなか言えない不安や孤独を、
+                  ひとりで抱えてしまいがちです。
+                  同じ立場の人にしか分からない想いを、あなたも心の奥に抱えていませんか。
                 </p>
               </AnimatedSection>
               <AnimatedSection direction="up" delay={0.6}>
                 <div className="flex items-start">
                   <ArrowDownRight className="w-8 h-8 mr-4 text-gold-500 flex-shrink-0 animate-pulse" />
                   <p className="text-lg md:text-xl font-bold text-ink border-b-2 border-gold-500 pb-2 inline-block">
-                    他者依存の幸福から、私の人生の主導権へ。
+                    ひとりで抱える孤独から、安心してつながれる場所へ。
                   </p>
                 </div>
               </AnimatedSection>
@@ -55,9 +55,9 @@ const Concept: React.FC = () => {
               style={{ background: 'linear-gradient(to top, rgba(34,26,16,0.85) 0%, rgba(34,26,16,0.25) 45%, rgba(34,26,16,0.05) 100%)' }}
             ></div>
             <div className="absolute bottom-0 left-0 p-8 md:p-12">
-              <p className="font-cinzel text-gold-300 tracking-[0.25em] text-xs uppercase mb-3">Her Future</p>
+              <p className="font-cinzel text-gold-300 tracking-[0.25em] text-xs uppercase mb-3">Her Place</p>
               <p className="font-serif text-cream-50 text-2xl md:text-4xl font-bold leading-snug">
-                「私の未来は、<br />私で、守る。」
+                「同じ想いの、<br />仲間がいる。」
               </p>
             </div>
           </AnimatedSection>
@@ -75,9 +75,9 @@ const Concept: React.FC = () => {
                 Welcome to<br />Her Base
               </h3>
               <p className="text-cream-200/70 text-base md:text-xl max-w-2xl leading-relaxed">
-                HER BASE は、アスリートの妻のための「心の拠点（ベース）」です。<br />
-                メンタルケア・金融リテラシー・自己実現の３つの柱で、
-                あなたが自分の足で人生を歩むための力を、仲間とともに育てます。
+                HER BASE は、アスリートを支える人のための「安心できる拠点（ベース）」です。<br />
+                審査制のクローズドな環境で、同じ立場の仲間と安心してつながり、
+                孤独ではなく前向きな一歩を、ともに踏み出していきます。
               </p>
             </div>
           </AnimatedSection>

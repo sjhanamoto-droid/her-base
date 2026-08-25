@@ -47,26 +47,25 @@ const Hero: React.FC = () => {
               className="inline-block border border-gold-500 text-gold-700 bg-cream-50/70 px-3 py-1 text-xs font-bold tracking-[0.2em] mb-6 uppercase font-cinzel"
               style={ease(0.2)}
             >
-              For Athletes&apos; Wives
+              Private Closed Community
             </span>
 
             <h1
               className="text-4xl md:text-5xl lg:text-[3.6rem] font-bold font-serif leading-[1.25] mb-6 tracking-tight text-ink"
               style={ease(0.4)}
             >
-              夫の影ではなく、<br />
-              <span className="text-gold-600">私</span>の人生を<br />
-              生きる。
+              ひとりじゃない、と<br />
+              <span className="text-gold-600">思える</span>場所へ。
             </h1>
 
             <p className="text-stone-700 text-lg md:text-xl font-medium mb-10 leading-relaxed" style={ease(0.6)}>
-              アスリートの妻のための、<br />
-              メンタルケア・金融リテラシー・キャリア支援。
+              アスリートを支える人のための、<br />
+              審査制のクローズドコミュニティ。
             </p>
 
             <div style={ease(0.85)}>
               <Button variant="ink" size="lg" withArrow>
-                事前登録はこちら
+                入会について知る
               </Button>
             </div>
           </div>
@@ -78,15 +77,15 @@ const Hero: React.FC = () => {
         <div style={{ display: 'inline-flex', animation: 'marquee 32s linear infinite', willChange: 'transform' }} className="whitespace-nowrap items-center">
           {Array.from({ length: 2 }).map((_, r) => (
             <React.Fragment key={r}>
-              <span className="text-xl font-cinzel font-bold uppercase tracking-[0.2em] mx-8 text-ink">Mental Care</span>
+              <span className="text-xl font-cinzel font-bold uppercase tracking-[0.2em] mx-8 text-ink">Safe Space</span>
               <span className="w-2 h-2 bg-gold-500 rounded-full"></span>
-              <span className="text-xl font-cinzel font-bold uppercase tracking-[0.2em] mx-8 stroke-text">Financial Literacy</span>
+              <span className="text-xl font-cinzel font-bold uppercase tracking-[0.2em] mx-8 stroke-text">Peer Connection</span>
               <span className="w-2 h-2 bg-gold-500 rounded-full"></span>
-              <span className="text-xl font-cinzel font-bold uppercase tracking-[0.2em] mx-8 text-ink">Career</span>
+              <span className="text-xl font-cinzel font-bold uppercase tracking-[0.2em] mx-8 text-ink">Expert Talks</span>
               <span className="w-2 h-2 bg-gold-500 rounded-full"></span>
-              <span className="text-xl font-cinzel font-bold uppercase tracking-[0.2em] mx-8 stroke-text">Community</span>
+              <span className="text-xl font-cinzel font-bold uppercase tracking-[0.2em] mx-8 stroke-text">Closed Community</span>
               <span className="w-2 h-2 bg-gold-500 rounded-full"></span>
-              <span className="text-xl font-cinzel font-bold uppercase tracking-[0.2em] mx-8 text-ink">Self-Realization</span>
+              <span className="text-xl font-cinzel font-bold uppercase tracking-[0.2em] mx-8 text-ink">Not Alone</span>
               <span className="w-2 h-2 bg-gold-500 rounded-full"></span>
             </React.Fragment>
           ))}

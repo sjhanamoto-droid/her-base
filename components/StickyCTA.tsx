@@ -18,7 +18,7 @@ const StickyCTA: React.FC = () => {
         href={PREREGISTER_URL}
         className="block w-full bg-ink text-cream-50 py-4 text-center font-cinzel font-bold tracking-[0.15em] uppercase shadow-[0_-4px_20px_rgba(0,0,0,0.15)]"
       >
-        無料で事前登録する
+        入会を申し込む
       </a>
     </div>
   );

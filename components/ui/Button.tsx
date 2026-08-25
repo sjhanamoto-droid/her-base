@@ -42,7 +42,7 @@ const Button: React.FC<ButtonProps> = ({
     if (props.onClick) {
       props.onClick(e);
     } else {
-      // 既定動作: 事前登録セクションへスムーズスクロール
+      // 既定動作: 入会申し込みセクションへスムーズスクロール
       const target = document.querySelector(JOIN_ANCHOR);
       if (target) {
         target.scrollIntoView({ behavior: 'smooth' });

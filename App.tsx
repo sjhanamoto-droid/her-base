@@ -11,6 +11,7 @@ import Flow from './components/Flow';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import StickyCTA from './components/StickyCTA';
+import PreparationNotice from './components/PreparationNotice';
 
 const App: React.FC = () => {
   return (
@@ -29,6 +30,7 @@ const App: React.FC = () => {
       </main>
       <Footer />
       <StickyCTA />
+      <PreparationNotice />
     </div>
   );
 };

@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col items-center justify-center text-center mb-20">
           <img src="/images/logo.png" alt="HER BASE" className="h-36 md:h-44 w-auto mb-2" />
           <p className="text-sm md:text-base font-serif font-bold text-stone-700 mt-2">
-            夫の影ではなく、私の人生を生きる。
+            ひとりじゃない、と思える場所へ。
           </p>
         </div>
 
@@ -20,9 +20,8 @@ const Footer: React.FC = () => {
           <div className="col-span-1 md:col-span-2">
             <p className="font-cinzel text-xl font-bold uppercase tracking-wide text-ink mb-4">Her Base</p>
             <p className="text-sm text-stone-600 leading-relaxed max-w-sm">
-              アスリートの妻が「夫の影」から抜け出し、自らの人生の主導権を握るためのプラットフォーム。
-              メンタルケア・金融リテラシー・キャリア機会を通じて、
-              すべての女性が自分らしく輝ける未来を支えます。
+              アスリートを支える人が、安心してつながり、孤独を感じず前向きな一歩を踏み出せる、審査制のクローズドコミュニティ。
+              同じ立場の仲間と、あたたかく確かな居場所を育てます。
             </p>
           </div>
 
@@ -30,8 +29,9 @@ const Footer: React.FC = () => {
             <p className="font-cinzel font-bold uppercase mb-4 text-ink tracking-wide">Menu</p>
             <ul className="space-y-2 text-sm text-stone-600">
               <li><a href="#concept" className="hover:text-gold-600 transition-colors">Concept</a></li>
-              <li><a href="#support" className="hover:text-gold-600 transition-colors">Support</a></li>
+              <li><a href="#service" className="hover:text-gold-600 transition-colors">Service</a></li>
               <li><a href="#voice" className="hover:text-gold-600 transition-colors">Voice</a></li>
+              <li><a href="#flow" className="hover:text-gold-600 transition-colors">Flow</a></li>
               <li><a href="#faq" className="hover:text-gold-600 transition-colors">FAQ</a></li>
             </ul>
           </div>

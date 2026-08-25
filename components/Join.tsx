@@ -4,9 +4,9 @@ import Button from './ui/Button';
 import { PREREGISTER_URL } from '../constants';
 
 const perks = [
-  'リリース情報をいち早くお届け',
-  '先行メンバー限定のご案内・特典',
-  '個別ヒアリング（ご相談）の優先枠',
+  '面談で、疑問や不安をご相談いただけます',
+  'あなたに合う場所かを、一緒に確認します',
+  'ゲストとしての体験参加もご案内可能です',
 ];
 
 const Join: React.FC = () => {
@@ -15,7 +15,7 @@ const Join: React.FC = () => {
       <div className="max-w-[1920px] mx-auto px-6 md:px-12">
         <div className="mb-16 text-center">
           <h2 className="text-6xl md:text-9xl font-cinzel font-bold uppercase tracking-tight mb-4">Join</h2>
-          <p className="text-cream-200/70">サービス開始に向けて、準備を進めています。</p>
+          <p className="text-cream-200/70">アスリートを支える、あなたのご参加をお待ちしています。</p>
         </div>
 
         <div className="max-w-4xl mx-auto border border-gold-500/40 bg-ink-800/40">
@@ -25,17 +25,17 @@ const Join: React.FC = () => {
               <span className="inline-block self-start bg-gold-500 text-white text-xs font-bold px-3 py-1 uppercase font-cinzel tracking-wider mb-6">
                 Now Accepting
               </span>
-              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-4">事前登録、受付中</h3>
+              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-4">まずは、面談から。</h3>
               <p className="text-cream-200/70 leading-relaxed">
-                現在、HER BASE はサービス開始に向けて準備中です。
-                事前登録いただいた方に、最新情報や先行体験のご案内を優先的にお届けします。
-                <span className="text-gold-300 font-bold">事前登録は無料</span>です。
+                HER BASE は、アスリートを支える人のための審査制コミュニティです。
+                ホームページからのお申し込み後、面談・審査を経てご入会いただきます。
+                <span className="text-gold-300 font-bold">お申し込み・面談は無料</span>です。
               </p>
             </div>
 
             {/* Right */}
             <div className="p-10 md:p-14 flex flex-col justify-center">
-              <p className="font-cinzel text-gold-400 tracking-[0.2em] text-sm uppercase mb-6">Pre-Register Perks</p>
+              <p className="font-cinzel text-gold-400 tracking-[0.2em] text-sm uppercase mb-6">About the Interview</p>
               <ul className="space-y-4 mb-8">
                 {perks.map((p, i) => (
                   <li key={i} className="flex items-start">
@@ -53,7 +53,7 @@ const Join: React.FC = () => {
         <div className="text-center mt-16">
           <a href={PREREGISTER_URL}>
             <Button variant="gold" size="xl" withArrow onClick={() => {}}>
-              無料で事前登録する
+              入会を申し込む
             </Button>
           </a>
           <p className="mt-4 text-sm text-cream-200/50">

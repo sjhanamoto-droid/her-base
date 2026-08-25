@@ -30,22 +30,22 @@ const Message: React.FC = () => {
           <AnimatedSection direction="left" delay={0.35} className="lg:col-span-6">
             <p className="font-cinzel text-gold-600 tracking-[0.25em] text-sm mb-4 uppercase">Message</p>
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight text-ink mb-8">
-              私も、同じ場所に<br />立っていました。
+              私も、ひとりで<br />抱えていました。
             </h3>
             <div className="space-y-5 text-stone-700 leading-relaxed text-base md:text-lg">
               <p>
-                夫が夢を叶えていく姿を、誰よりも近くで見てきました。
-                支えることに夢中で、気づけば自分のキャリアは止まり、
-                「私は何がしたかったんだろう」——そう問いかける自分がいました。
+                アスリートを支える立場を、誰よりも近くで経験してきました。
+                誇らしい一方で、まわりには言えない不安や孤独を、
+                ずっとひとりで抱えていた時期があります。
               </p>
               <p>
-                夫の成績に一喜一憂し、将来のお金を考えると眠れない夜もありました。
-                でも、本当は分かっていたんです。
-                <span className="text-ink font-bold">夫の人生ではなく、私自身の人生を生きていい</span>、ということを。
+                同じ立場の人と、ただ安心して話せる場所があれば——。
+                そう強く願ったことが、HER BASE のはじまりです。
+                <span className="text-ink font-bold">あなたは、ひとりじゃない</span>、ということを伝えたい。
               </p>
               <p className="text-ink font-bold border-l-4 border-gold-500 pl-6 py-1">
-                ここは、あなたが「あなた」に戻り、自分の足で歩き出すための拠点（ベース）です。
-                同じ想いを抱えるすべての女性と、一緒にはじめたい。心から、そう願っています。
+                ここは、アスリートを支えるあなたが、安心してつながり、前を向くための拠点（ベース）です。
+                かつての私と同じ想いを抱えるあなたと、一緒にはじめたい。心から、そう願っています。
               </p>
             </div>
             <div className="mt-8 flex items-end gap-4">

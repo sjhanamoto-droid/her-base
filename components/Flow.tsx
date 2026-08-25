@@ -1,20 +1,21 @@
 import React from 'react';
 import SectionTitle from './SectionTitle';
-import { Smartphone, MessageCircleHeart, Sparkles } from 'lucide-react';
+import { Smartphone, MessageCircleHeart, ShieldCheck, Sparkles } from 'lucide-react';
 
 const Flow: React.FC = () => {
   const steps = [
-    { icon: <Smartphone className="w-8 h-8" />, title: '事前登録', desc: 'メール（または準備中の公式LINE）から、かんたんに事前登録。' },
-    { icon: <MessageCircleHeart className="w-8 h-8" />, title: '個別ヒアリング', desc: 'あなたの状況やお悩みを、丁寧にお伺いします。' },
-    { icon: <Sparkles className="w-8 h-8" />, title: 'ご案内・スタート', desc: 'サービス開始時に、あなたに合ったプランをご案内します。' },
+    { icon: <Smartphone className="w-8 h-8" />, title: 'お申し込み', desc: 'ホームページのフォーム（またはメール）から、かんたんにお申し込み。' },
+    { icon: <MessageCircleHeart className="w-8 h-8" />, title: '面談', desc: 'オンラインで面談。あなたの想いやご状況を、丁寧にお伺いします。' },
+    { icon: <ShieldCheck className="w-8 h-8" />, title: '審査', desc: 'アスリートを支える立場であることを確認のうえ、審査を行います。' },
+    { icon: <Sparkles className="w-8 h-8" />, title: 'ご入会', desc: '有料会員として本入会。安心できるコミュニティへ、ようこそ。' },
   ];
 
   return (
-    <section className="py-24 bg-cream-50">
+    <section id="flow" className="py-24 bg-cream-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionTitle en="FLOW" ja="はじめるまでの流れ" />
+        <SectionTitle en="FLOW" ja="ご入会までの流れ" />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-12">
           {steps.map((step, idx) => (
             <div key={idx} className="relative flex flex-col items-center text-center">
               {idx < steps.length - 1 && (

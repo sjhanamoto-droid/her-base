@@ -1,6 +1,6 @@
 # HER BASE
 
-アスリートの妻の自己実現支援プラットフォーム「HER BASE」のランディングページ。
+アスリートを支える人のための、審査制クローズドコミュニティ「HER BASE」のランディングページ。同じ立場の仲間と安心してつながり、孤独を感じず前向きな一歩を踏み出せる居場所を届けます。
 
 `first-class_LP` のデザイン・レイアウトをベースに、HER BASE のロゴ（ゴールド × アイボリー × クラシックセリフ）の世界観へ再構築したものです。**Vercel** で公開する前提で構成しています。
 
@@ -35,8 +35,8 @@ npx vercel --prod # 本番公開
 
 ## セクション構成（`App.tsx`）
 
-Hero → Concept（課題提起＋3つの柱）→ Message（代表挨拶）→ Members（メンバー紹介カルーセル）
-→ Support（4つの支援）→ Voices（共感の声）→ ConsultBand → Join（事前登録）→ Flow → FAQ → Footer
+Hero → Concept（課題提起＋3つの柱：安心／つながり／一歩）→ Message（代表挨拶）→ Members（運営メンバー紹介カルーセル）
+→ Service（提供する6つのサービス＋運営の考え方）→ Voices（共感の声）→ Join（入会申し込み）→ Flow（申込→面談→審査→本入会）→ FAQ → Footer
 
 ## コンテンツの編集ポイント
 
@@ -59,5 +59,5 @@ Hero → Concept（課題提起＋3つの柱）→ Message（代表挨拶）→ 
 
 - [ ] 代表者名（`constants.ts` の `REP_NAME`）
 - [ ] メンバーの氏名・肩書・自己紹介（`components/Members.tsx`）
-- [ ] 事前登録の導線（公式LINE / フォーム URL）
+- [ ] 入会申し込みの導線（公式LINE / フォーム URL。現在は `mailto:`）
 - [ ] 特定商取引法に基づく表記の事業者情報（`components/LegalModal.tsx`）

@@ -5,45 +5,63 @@ import AnimatedSection from './AnimatedSection';
 const services = [
   {
     id: '01',
-    en: 'Mental Care',
-    jp: 'メンタルケア',
-    desc: '専門家による、心のサポート',
+    en: 'Closed Community',
+    jp: 'クローズドコミュニティ',
+    desc: '審査制・ニックネーム参加',
     detail:
-      '夫の競技成績に左右される家庭内の精神的な負担を、専門のメンタルケア担当者がサポート。あなた自身の心を整え、何があっても揺らがない「自分軸」を育てます。',
-    features: ['専門家による個別カウンセリング', '同じ立場の仲間とのシェア会', '自分軸を育てるワークショップ'],
+      'アスリートを支える人だけが参加できる、審査制のクローズドコミュニティ。ニックネームで参加できるので、お立場を明かしにくい方も、安心して本音を話せる環境を大切にしています。',
+    features: ['審査制で守られた安心の場', 'ニックネームで参加OK', '会員限定のオンラインの居場所'],
   },
   {
     id: '02',
-    en: 'Financial Literacy',
-    jp: '金融リテラシー',
-    desc: '将来の不安を、知識で自信に',
+    en: 'Talk Session',
+    jp: '奥様のお話会',
+    desc: '有名選手の奥様のリアルな体験談',
     detail:
-      '将来のお金の不安を解消するため、資産防衛や運用の具体的な知識と選択肢を提供。「稼ぐ」だけでなく「守る・増やす」力を身につけ、経済的な自立を叶えます。',
-    features: ['家計・資産の基礎講座', '資産防衛と運用の考え方', 'NISA・保険の見直しサポート'],
+      '第一線でアスリートを支えてきた有名選手の奥様をお招きし、リアルな体験や日々の工夫を伺うお話会。同じ立場だからこそ響く、等身大のヒントが得られます。',
+    features: ['著名な奥様の体験談', '支える立場ならではの工夫', '質問・交流の時間'],
   },
   {
     id: '03',
-    en: 'Self-Realization',
-    jp: 'キャリア・自己実現',
-    desc: '「私のやりたい」を、仕事に',
+    en: 'Expert Talk',
+    jp: '専門家との対談配信',
+    desc: 'メンバーの相談から生まれるテーマ',
     detail:
-      'あなた自身が「やりたいこと」を見つけ、キャリア形成や自分の仕事を持つための機会を創出。小さな一歩から、あなたの挑戦を仲間と専門家が後押しします。',
-    features: ['強み発見とキャリア設計', '起業・副業の0→1サポート', 'スキル講座と実践の場'],
+      'メンバーから寄せられた相談やお悩みをもとに、各分野の専門家と対談する配信をお届け。あなたの「知りたい」に、専門家の視点で丁寧に応えます。',
+    features: ['相談ベースのテーマ設定', '各分野の専門家が登壇', '見逃しても後から視聴'],
   },
   {
     id: '04',
-    en: 'Community',
-    jp: '繋がり',
-    desc: '「一人じゃない」を実感できる場所',
+    en: 'Tax Consulting',
+    jp: '税理士相談会',
+    desc: '月1回程度の定期開催',
     detail:
-      '同じ立場だからこそ、分かり合える。孤独になりがちなアスリートの妻が、安心して本音を話し、互いに刺激し合える。人生を変えるのは、質の高い出会いです。',
-    features: ['定例のオンライン交流会', '会員限定コミュニティスペース', '経験者・専門家とのつながり'],
+      'お金や税金の不安に、月1回程度の税理士相談会で寄り添います。人には聞きにくいお金のことも、安心して相談できる場所です。',
+    features: ['月1回程度の定期開催', '税理士に直接相談できる', 'お金の不安を解消'],
+  },
+  {
+    id: '05',
+    en: 'Tea Party',
+    jp: 'お茶会',
+    desc: '気軽につながる、ゆるやかな時間',
+    detail:
+      'かしこまらず、ゆるやかに集うお茶会。同じ立場の仲間と、日々のことを気軽に話せる時間です。はじめての方も、安心してご参加いただけます。',
+    features: ['リラックスした雰囲気', '気軽な交流の場', 'はじめての方も安心'],
+  },
+  {
+    id: '06',
+    en: 'Expert Events',
+    jp: '専門家とのイベント',
+    desc: '暮らしや将来に役立つ企画',
+    detail:
+      '暮らしや将来に役立つテーマで、各種専門家とのイベントを企画。メンバーの声をもとに、学びと出会いの機会を少しずつ広げていきます。',
+    features: ['多彩なテーマの企画', '専門家から直接学べる', 'メンバーの声から企画'],
   },
 ];
 
 const Services: React.FC = () => {
   return (
-    <div id="support" className="border-b border-black/10">
+    <div id="service" className="border-b border-black/10">
       {/* Header */}
       <AnimatedSection direction="fade" className="py-24 text-center border-b border-black/10 bg-ink text-cream-50 relative overflow-hidden">
         <div
@@ -51,9 +69,9 @@ const Services: React.FC = () => {
           style={{ background: 'radial-gradient(circle at 50% 50%, #b78829, transparent 60%)' }}
         ></div>
         <div className="relative z-10 flex flex-col items-center justify-center">
-          <h2 className="text-5xl md:text-8xl font-cinzel font-bold uppercase tracking-tight mb-4 animate-fade-in">Support</h2>
+          <h2 className="text-5xl md:text-8xl font-cinzel font-bold uppercase tracking-tight mb-4 animate-fade-in">Service</h2>
           <AnimatedSection direction="up" delay={0.4}>
-            <p className="text-gold-400 font-bold tracking-[0.2em] font-cinzel uppercase text-sm">4 Pillars of HER BASE</p>
+            <p className="text-gold-400 font-bold tracking-[0.2em] font-cinzel uppercase text-sm">HER BASE でできること</p>
           </AnimatedSection>
         </div>
       </AnimatedSection>
@@ -104,19 +122,19 @@ const Services: React.FC = () => {
           style={{ background: 'radial-gradient(circle at 30% 50%, rgba(255,255,255,0.35), transparent 55%)' }}
         ></div>
         <AnimatedSection direction="right" delay={0.2} className="p-12 md:p-16 border-b md:border-b-0 md:border-r border-white/25 hover:bg-gold-600 transition-all duration-500 relative z-10 group">
-          <h4 className="text-2xl md:text-3xl font-cinzel font-bold mb-4 uppercase group-hover:scale-[1.02] origin-left transition-transform duration-300">Partner Network</h4>
-          <p className="font-bold mb-4 font-serif">賛同者との連携</p>
+          <h4 className="text-2xl md:text-3xl font-cinzel font-bold mb-4 uppercase group-hover:scale-[1.02] origin-left transition-transform duration-300">Screening</h4>
+          <p className="font-bold mb-4 font-serif">安心を守る、審査制</p>
           <p className="text-sm md:text-base opacity-90 leading-relaxed">
-            野球チーム関係者をはじめ、多くの経営者・企業から「ぜひ協力したい」という声をいただいています。
-            賛同いただくパートナーと連携し、学びと活躍の機会を広げていきます。
+            誰でも自由に入れる場所ではありません。一人ひとり面談を行い、アスリートを支える人であることを確認したうえでご参加いただきます。
+            その一手間が、みなさんの安心を守ります。
           </p>
         </AnimatedSection>
         <AnimatedSection direction="left" delay={0.3} className="p-12 md:p-16 hover:bg-gold-600 transition-all duration-500 relative z-10 group">
-          <h4 className="text-2xl md:text-3xl font-cinzel font-bold mb-4 uppercase group-hover:scale-[1.02] origin-left transition-transform duration-300">Future Vision</h4>
-          <p className="font-bold mb-4 font-serif">これからの展望</p>
+          <h4 className="text-2xl md:text-3xl font-cinzel font-bold mb-4 uppercase group-hover:scale-[1.02] origin-left transition-transform duration-300">Our Stance</h4>
+          <p className="font-bold mb-4 font-serif">小さくても、深く届ける</p>
           <p className="text-sm md:text-base opacity-90 leading-relaxed">
-            まずはアスリートの妻から。やがて経営者や医師の妻、そしてシングルマザーへ。
-            夫や誰かの影ではなく、すべての女性が自らの人生を主体的に生きられる社会を目指します。
+            大きさよりも、本当に届けたい人へ深く届けることを大切にしています。
+            まずは会員のみなさまと一緒に、あたたかく確かな居場所を、少しずつ育てていきます。
           </p>
         </AnimatedSection>
       </div>
