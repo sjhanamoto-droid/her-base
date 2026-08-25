@@ -9,20 +9,18 @@ type Member = {
   role: string;
   roleJp: string;
   intro: string;
-  tags: string[];
 };
 
 // メンバー情報（お名前はフォルダ名、自己紹介・役割は仮テキストです。差し替え自由です）
 const members: Member[] = [
   {
     file: 'fuchan',
-    name: 'ふうちゃん',
-    romaji: 'Fuchan',
+    name: '柳生　史乃',
+    romaji: 'Yagyu Shino',
     role: 'Community',
     roleJp: 'コミュニティ運営',
     intro:
       '心がふっと軽くなる時間を、あなたに。うまく言葉にできない“もやもや”も、遠慮なく話してくださいね。聞くことが、わたしの得意です。',
-    tags: ['#傾聴力には自信あり', '#甘いものは正義', '#ヨガでリセット'],
   },
   {
     file: 'maiko',
@@ -32,7 +30,6 @@ const members: Member[] = [
     roleJp: 'お話会・イベント',
     intro:
       'お話会やお茶会で、みなさんと過ごす時間が大好きです。同じ立場だからこそ話せること、一緒に見つけていきましょう。まずは気軽に、のぞいてみてくださいね。',
-    tags: ['#新しいこと大好き', '#カフェ研究家', '#朝活2年目'],
   },
   {
     file: 'kazumi',
@@ -42,7 +39,6 @@ const members: Member[] = [
     roleJp: '専門家相談',
     intro:
       'お金の話は、こわくない。税理士相談会など、専門家とみなさんの“橋渡し”がわたしの役目です。むずかしいことは、とことん“やさしく”翻訳してお届けします。',
-    tags: ['#数字とにらめっこ', '#家計改善オタク', '#休日は登山'],
   },
   {
     file: 'jei',
@@ -52,7 +48,6 @@ const members: Member[] = [
     roleJp: 'メンバーサポート',
     intro:
       '一人でがんばらなくて、いいんです。ここには、あなたを応援する仲間がいます。入会後もそっと寄り添いますので、まずは気軽に、顔を出してみてください！',
-    tags: ['#ムードメーカー', '#イベント大好き', '#実はコーヒー党'],
   },
   {
     file: 'masaki',
@@ -62,7 +57,6 @@ const members: Member[] = [
     roleJp: 'クリエイティブ',
     intro:
       'コミュニティの雰囲気や、みなさんの“らしさ”を、いちばん素敵な形で残していきます。新しい一歩に踏み出すあなたは、それだけでもう、絵になる。',
-    tags: ['#カメラが相棒', '#光を追う人', '#猫派'],
   },
 ];
 
@@ -189,20 +183,9 @@ const Members: React.FC = () => {
               <h3 className="font-serif text-4xl md:text-6xl font-bold text-ink">{m.name}</h3>
               <span className="font-cinzel text-gold-500 text-lg md:text-xl tracking-widest uppercase">{m.romaji}</span>
             </div>
-            <p key={`intro-${active}`} className="text-stone-700 text-base md:text-lg leading-relaxed mb-8 max-w-xl" style={{ animation: 'mUp 0.6s ease-out 0.16s both' }}>
+            <p key={`intro-${active}`} className="text-stone-700 text-base md:text-lg leading-relaxed mb-10 max-w-xl" style={{ animation: 'mUp 0.6s ease-out 0.16s both' }}>
               {m.intro}
             </p>
-            <div key={`tags-${active}`} className="flex flex-wrap gap-2 mb-10">
-              {m.tags.map((t, i) => (
-                <span
-                  key={t}
-                  className="px-3 py-1.5 rounded-full bg-cream-100 border border-gold-500/30 text-gold-700 text-xs font-bold"
-                  style={{ animation: `mUp 0.5s ease-out ${0.24 + i * 0.08}s both` }}
-                >
-                  {t}
-                </span>
-              ))}
-            </div>
 
             {/* Controls */}
             <div className="flex items-center gap-4">

@@ -6,8 +6,7 @@ export const CONTACT_EMAIL = 'info@sjdesign.jp';
 
 // 代表挨拶
 export const REP_TITLE = 'HER BASE 代表';
-// TODO: 代表者様のお名前に差し替えてください
-export const REP_NAME = '◯◯　◯◯';
+export const REP_NAME = '柳生　史乃';
 
 // 入会申し込み・お問い合わせの導線
 // 公式LINEやフォームが用意でき次第、PREREGISTER_URL を差し替えてください。
