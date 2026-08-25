@@ -15,7 +15,7 @@ const Header: React.FC = () => {
   const navLinks = [
     { name: 'CONCEPT', href: '#concept' },
     { name: 'MESSAGE', href: '#message' },
-    { name: 'MEMBER', href: '#members' },
+    // { name: 'MEMBER', href: '#members' }, // Members セクション非表示に伴い一旦非表示
     { name: 'SERVICE', href: '#service' },
     { name: 'FLOW', href: '#flow' },
     { name: 'FAQ', href: '#faq' },

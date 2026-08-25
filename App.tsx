@@ -21,7 +21,7 @@ const App: React.FC = () => {
         <Hero />
         <Concept />
         <Message />
-        <Members />
+        {/* <Members /> 一旦非表示（セクションごと） */}
         <Services />
         <Voices />
         <Join />
