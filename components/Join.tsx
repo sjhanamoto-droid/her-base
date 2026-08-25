@@ -25,12 +25,11 @@ const Join: React.FC = () => {
               <span className="inline-block self-start bg-gold-500 text-white text-xs font-bold px-3 py-1 uppercase font-cinzel tracking-wider mb-6">
                 Now Accepting
               </span>
-              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-4">お気軽にご相談ください。</h3>
+              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-4">お気軽にご相談ください！</h3>
               <p className="text-cream-200/70 leading-relaxed">
-                HER BASE は、アスリートを支える人のための審査制コミュニティです。
-                まずは専用フォームから、いまのお気持ちやお悩みをお聞かせください。
-                内容を拝見したうえで、面談・審査を経てご入会いただきます。
-                <span className="text-gold-300 font-bold">ご相談・面談は無料</span>です。
+                HERBASE は現在<span className="text-gold-300 font-bold">サービスの準備中</span>です。
+                様々な方、アスリートの妻や奥様のご意見やご相談、お悩みなどを幅広く知りたいので、
+                ぜひ下記のフォームから今の気持ちやお悩みをお聞かせください。
               </p>
             </div>
 
