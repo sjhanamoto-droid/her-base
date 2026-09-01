@@ -21,12 +21,12 @@ const App: React.FC = () => {
       <Header />
       <main>
         <Hero />
-        <Concept />
-        <Pillars />
         <Message />
-        <Members />
-        <Services />
         <Voices />
+        <Pillars />
+        <Services />
+        <Concept />
+        <Members />
         <Membership />
         <Join />
         <Flow />

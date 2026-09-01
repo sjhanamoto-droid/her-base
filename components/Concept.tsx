@@ -68,8 +68,8 @@ const Concept: React.FC = () => {
                 Welcome to HERBASE
               </h3>
               <p className="text-stone-600 text-[0.95rem] md:text-base leading-[2.1]">
-                HERBASE は、アスリートを支える人のための「拠点（ベース）」です。
-                審査制のクローズドな環境で、同じ立場の仲間と安心してつながりながら、
+                HERBASE は、アスリートを支える人のための審査制/会員制ライフサポートサービスです。
+                同じ立場の仲間と安心してつながりながら、
                 支えるだけでなく、自分自身の人生にも挑戦する一歩を、ともに踏み出していきます。
               </p>
             </div>
