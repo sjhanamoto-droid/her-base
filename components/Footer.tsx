@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
           <div className="col-span-1 md:col-span-2">
             <p className="font-display text-lg tracking-[0.25em] uppercase text-ink mb-5">HERBASE</p>
             <p className="text-sm text-stone-600 leading-[2] max-w-sm">
-              アスリートを支える妻・パートナーのための、審査制・会員制のライフサポートサービス。
+              現役プロアスリートを支える方・パートナーのための、審査制の会員制ライフサポートサービス。
               支えるだけでなく、自分自身の人生にも挑戦する——お互いの挑戦を応援し合える関係を、ここから。
             </p>
             <a

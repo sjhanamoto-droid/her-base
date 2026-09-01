@@ -6,7 +6,7 @@ import AnimatedSection from './AnimatedSection';
 const includes = [
   '会員限定コンテンツの視聴',
   'オンライン企画・座談会への参加',
-  '会員コミュニティへの参加',
+  '会員どうしの交流の場への参加',
   '経験シェア・悩み相談',
   'イベント・セミナーの優先案内',
 ];
@@ -36,7 +36,7 @@ const Membership: React.FC = () => {
           <AnimatedSection direction="right" delay={0.2}>
             <div className="h-full bg-base-100 border border-ink/10 p-8 md:p-12">
               <span className="inline-flex items-center gap-2 border border-ink/60 text-ink text-xs tracking-[0.15em] px-3 py-1.5 mb-7">
-                <ShieldCheck className="w-4 h-4" strokeWidth={1.5} /> 審査制・会員制コミュニティ
+                <ShieldCheck className="w-4 h-4" strokeWidth={1.5} /> 審査制・会員制サービス
               </span>
               <p className="text-stone-600 leading-[2] mb-8 text-[0.95rem]">
                 安心して本音で話せる環境を守るため、ご入会には審査があります。

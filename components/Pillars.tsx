@@ -58,7 +58,7 @@ const Pillars: React.FC = () => {
                 </span>
                 <div>
                   <p className="font-display tracking-[0.2em] text-oak-600 text-xs md:text-sm uppercase">HERBASE Mindset</p>
-                  <h3 className="font-serif text-xl md:text-2xl font-semibold text-ink mt-1.5">支えるから、一緒に挑戦するへ。</h3>
+                  <h3 className="font-serif text-xl md:text-2xl font-semibold text-ink mt-1.5">支える人も、挑戦する人へ。</h3>
                 </div>
               </div>
               <p className="text-stone-600 leading-[2] text-[0.95rem] md:text-base">

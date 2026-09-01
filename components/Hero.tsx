@@ -74,8 +74,8 @@ const Hero: React.FC = () => {
               className="font-serif font-semibold text-[1.9rem] md:text-[2.6rem] lg:text-[2.9rem] tracking-[0.1em] leading-[1.6] text-ink mb-7 md:mb-9"
               style={ease(0.45)}
             >
-              支えるから、<br />
-              一緒に挑戦するへ。
+              支える人も、<br />
+              挑戦する人へ。
             </p>
 
             <p
