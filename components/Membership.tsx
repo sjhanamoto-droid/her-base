@@ -74,7 +74,7 @@ const Membership: React.FC = () => {
               </ul>
               <div className="mt-10">
                 <Button variant="ink" size="lg" withArrow fullWidth>
-                  まずはご相談ください
+                  お問い合わせ
                 </Button>
               </div>
             </div>

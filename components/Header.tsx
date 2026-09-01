@@ -51,7 +51,7 @@ const Header: React.FC = () => {
               rel="noopener noreferrer"
               className="bg-ink text-base-50 px-7 py-3 text-xs tracking-[0.22em] hover:bg-ink/80 transition-colors"
             >
-              ご相談はこちら
+              お問い合わせ
             </a>
           </nav>
 
@@ -84,7 +84,7 @@ const Header: React.FC = () => {
               onClick={() => setIsMobileMenuOpen(false)}
               className="block text-center w-full bg-ink text-base-50 py-4 text-sm tracking-[0.22em]"
             >
-              ご相談はこちら
+              お問い合わせ
             </a>
           </div>
         </div>

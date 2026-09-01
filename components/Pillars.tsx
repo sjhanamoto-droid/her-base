@@ -82,8 +82,8 @@ const Pillars: React.FC = () => {
                 </div>
               </div>
               <p className="text-stone-600 leading-[2] text-[0.95rem] md:text-base">
-                キャリア・お金・家事育児・健康・夫婦関係…<br className="hidden md:block" />
-                あなたの人生に必要なテーマを、自由に選んで学び、選択肢を広げていく。
+                キャリア、お金、家事・育児、健康、夫婦関係、引退後の生活など、<br className="hidden md:block" />
+                自分の人生に必要なテーマを自由に選び、先輩パートナーや専門家との出会いを通じて、新しい選択肢と出会う機会をつくる。
               </p>
               <ChipRow chips={lifeDesignChips} />
             </div>

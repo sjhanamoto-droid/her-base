@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
         <div className="w-full max-w-[1760px] mx-auto px-6 md:px-12 lg:px-20 pb-24 md:pb-16 pt-32 md:pt-40">
           <div className="max-w-2xl">
             <p className="text-[0.68rem] md:text-xs tracking-[0.35em] text-ink/80 mb-5 md:mb-7" style={ease(0.15)}>
-              PRIVATE CLOSED COMMUNITY
+              MEMBERSHIP / LIFE SUPPORT SERVICE
             </p>
 
             <h1
@@ -74,7 +74,7 @@ const Hero: React.FC = () => {
               className="font-serif font-semibold text-[1.9rem] md:text-[2.6rem] lg:text-[2.9rem] tracking-[0.1em] leading-[1.6] text-ink mb-7 md:mb-9"
               style={ease(0.45)}
             >
-              支える人も、<br />
+              アスリートを支える妻も、<br />
               挑戦する人へ。
             </p>
 
@@ -101,7 +101,7 @@ const Hero: React.FC = () => {
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-between gap-8 border border-ink/60 text-ink bg-base-50/40 px-8 py-4 text-[0.8rem] tracking-[0.2em] hover:bg-ink hover:text-base-50 transition-colors"
               >
-                まずはご相談ください
+                お問い合わせはこちら
                 <span className="transition-transform duration-300 group-hover:translate-x-1.5">→</span>
               </a>
             </div>

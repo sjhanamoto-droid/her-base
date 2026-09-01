@@ -9,9 +9,9 @@ export const REP_TITLE = 'HER BASE 代表';
 export const REP_NAME = '柳生　史乃';
 
 // お悩みヒアリング・ご相談の導線
-// まずは Google フォームでお悩みをお聞かせいただきます。
-// フォームURLはここを差し替えるだけで全体に反映されます。
-export const PREREGISTER_URL = 'https://forms.gle/cu2SfFQuHQD6dKvC6';
+// ご相談は Instagram の DM でお受けします。
+// 遷移先URLはここを差し替えるだけで全体（各CTAボタン）に反映されます。
+export const PREREGISTER_URL = 'https://www.instagram.com/her_base';
 
 // ページ内のご相談セクションへスクロール
 export const JOIN_ANCHOR = '#join';

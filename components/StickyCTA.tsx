@@ -20,7 +20,7 @@ const StickyCTA: React.FC = () => {
         rel="noopener noreferrer"
         className="block w-full bg-ink text-base-50 py-4 text-center text-sm tracking-[0.22em] shadow-[0_-4px_20px_rgba(0,0,0,0.15)]"
       >
-        まずはご相談ください
+        お問い合わせ
       </a>
     </div>
   );

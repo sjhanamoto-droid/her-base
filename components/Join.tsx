@@ -30,7 +30,7 @@ const Join: React.FC = () => {
               <p className="text-base-100/70 leading-[2] text-sm md:text-[0.95rem]">
                 HERBASE は現在<span className="text-base-50 font-bold">サービスの準備中</span>です。
                 様々な方、アスリートの妻や奥様のご意見やご相談、お悩みなどを幅広く知りたいので、
-                ぜひ下記のフォームから今の気持ちやお悩みをお聞かせください。
+                ぜひ Instagram の DM から今の気持ちやお悩みをお聞かせください。
               </p>
             </div>
 
@@ -52,11 +52,11 @@ const Join: React.FC = () => {
         <div className="text-center mt-14 md:mt-16">
           <a href={PREREGISTER_URL} target="_blank" rel="noopener noreferrer" className="inline-block">
             <Button variant="cream" size="xl" withArrow onClick={() => {}}>
-              お悩み相談はこちら
+              InstagramのDMでご相談
             </Button>
           </a>
           <p className="mt-5 text-xs md:text-sm text-base-100/50">
-            Googleフォームが開きます（ご相談・面談は無料です）
+            Instagram（@her_base）が開きます。DMからお気軽にご相談ください（ご相談・面談は無料です）
           </p>
         </div>
       </div>

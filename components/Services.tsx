@@ -4,7 +4,7 @@ import AnimatedSection from './AnimatedSection';
 const services = [
   {
     id: '01',
-    en: 'Community',
+    en: 'Members Place',
     jp: '会員限定の居場所',
     desc: '同じ環境にいる仲間だからこそ話せる、安心の場',
     detail:
