@@ -1,245 +1,128 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { ArrowLeft, ArrowRight, MousePointerClick } from 'lucide-react';
+import React from 'react';
 import AnimatedSection from './AnimatedSection';
 
 type Member = {
   file: string;
   name: string;
   romaji: string;
-  role: string;
   roleJp: string;
+  roleEn: string;
   intro: string;
 };
 
-// メンバー情報（お名前はフォルダ名、自己紹介・役割は仮テキストです。差し替え自由です）
+// メンバー情報。写真は public/images/photo/member/<file>.jpg
+const rep: Member = {
+  file: 'fuchan',
+  name: '柳生 史乃',
+  romaji: 'Yagyu Shino',
+  roleJp: '代表',
+  roleEn: 'Founder',
+  intro:
+    '事業全体の統括および最終意思決定を担う。顧客インタビュー、サービス設計、コミュニティ運営を通じて顧客ニーズを把握し、HERBASEの事業・サービスを継続的に改善する。',
+};
+
 const members: Member[] = [
   {
-    file: 'fuchan',
-    name: '柳生　史乃',
-    romaji: 'Yagyu Shino',
-    role: 'Community',
-    roleJp: 'コミュニティ運営',
-    intro:
-      '心がふっと軽くなる時間を、あなたに。うまく言葉にできない“もやもや”も、遠慮なく話してくださいね。聞くことが、わたしの得意です。',
-  },
-  {
-    file: 'maiko',
-    name: 'まいこ',
-    romaji: 'Maiko',
-    role: 'Talk & Events',
-    roleJp: 'お話会・イベント',
-    intro:
-      'お話会やお茶会で、みなさんと過ごす時間が大好きです。同じ立場だからこそ話せること、一緒に見つけていきましょう。まずは気軽に、のぞいてみてくださいね。',
-  },
-  {
     file: 'kazumi',
-    name: 'かずみ',
-    romaji: 'Kazumi',
-    role: 'Expert Liaison',
-    roleJp: '専門家相談',
+    name: '鳥居 かずみ',
+    romaji: 'Torii Kazumi',
+    roleJp: 'コミュニティ運営マネージャー',
+    roleEn: 'Community',
     intro:
-      'お金の話は、こわくない。税理士相談会など、専門家とみなさんの“橋渡し”がわたしの役目です。むずかしいことは、とことん“やさしく”翻訳してお届けします。',
-  },
-  {
-    file: 'jei',
-    name: 'じぇい',
-    romaji: 'Jei',
-    role: 'Member Support',
-    roleJp: 'メンバーサポート',
-    intro:
-      '一人でがんばらなくて、いいんです。ここには、あなたを応援する仲間がいます。入会後もそっと寄り添いますので、まずは気軽に、顔を出してみてください！',
+      '会員コミュニティの運営、会員同士の交流促進、オンライン・オフラインイベントの企画・調整など、会員体験の向上を担当する。',
   },
   {
     file: 'masaki',
-    name: 'まさき',
-    romaji: 'Masaki',
-    role: 'Creative',
-    roleJp: 'クリエイティブ',
+    name: '花本 昌樹',
+    romaji: 'Hanamoto Masaki',
+    roleJp: 'テクノロジー担当',
+    roleEn: 'Technology',
     intro:
-      'コミュニティの雰囲気や、みなさんの“らしさ”を、いちばん素敵な形で残していきます。新しい一歩に踏み出すあなたは、それだけでもう、絵になる。',
+      'WEBサイト・アプリ等の開発、デジタル環境の構築、撮影・ビジュアル制作を担当し、HERBASEのサービス基盤を支える。',
+  },
+  {
+    file: 'maiko',
+    name: '水田 真依子',
+    romaji: 'Mizuta Maiko',
+    roleJp: '事業・パートナー戦略',
+    roleEn: 'Strategy',
+    intro:
+      '事業戦略の構築支援、コミュニティ設計、サービス提供に必要な専門家・外部パートナーとの連携およびネットワーク構築を担当する。',
+  },
+  {
+    file: 'jei',
+    name: '岡崎 純也',
+    romaji: 'Okazaki Junya',
+    roleJp: '財務・税務顧問（税理士）',
+    roleEn: 'Finance & Tax',
+    intro:
+      '資金計画、収支管理、税務対応など、事業運営における財務・税務面を支援する。',
   },
 ];
 
 const Members: React.FC = () => {
-  const [active, setActive] = useState(0);
-  const [dir, setDir] = useState(1);
-  const touchX = useRef<number | null>(null);
-  const len = members.length;
-
-  const goTo = (i: number, direction?: number) => {
-    const ni = (i + len) % len;
-    setDir(direction ?? (ni > active ? 1 : -1));
-    setActive(ni);
-  };
-  const next = () => { setDir(1); setActive((a) => (a + 1) % len); };
-  const prev = () => { setDir(-1); setActive((a) => (a - 1 + len) % len); };
-
-  // キーボード操作
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowRight') next();
-      if (e.key === 'ArrowLeft') prev();
-    };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-  }, []);
-
-  const onTouchStart = (e: React.TouchEvent) => { touchX.current = e.touches[0].clientX; };
-  const onTouchEnd = (e: React.TouchEvent) => {
-    if (touchX.current === null) return;
-    const dx = e.changedTouches[0].clientX - touchX.current;
-    if (dx < -40) next();
-    else if (dx > 40) prev();
-    touchX.current = null;
-  };
-
-  const m = members[active];
-  const prevM = members[(active - 1 + len) % len];
-  const nextM = members[(active + 1) % len];
-
   return (
-    <section id="members" className="relative overflow-hidden border-b border-black/10 bg-gradient-to-b from-cream-100 to-cream-50">
-      {/* Big faint background word */}
-      <h2 className="pointer-events-none select-none absolute top-24 right-[-2%] text-[16vw] leading-none font-cinzel font-bold text-gold-500/[0.07] uppercase">
-        Members
-      </h2>
-
-      {/* Group photo band */}
-      <div className="relative h-[300px] md:h-[420px] overflow-hidden">
-        <img src="/images/photo/member.jpg" alt="HER BASE members" className="w-full h-full object-cover object-top" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/30 to-ink/10"></div>
-        <div className="absolute inset-0 flex flex-col items-center justify-end pb-10 md:pb-14 text-center px-6">
-          <p className="font-cinzel text-gold-300 tracking-[0.3em] text-xs md:text-sm uppercase mb-3">Member Introduction</p>
-          <h3 className="font-serif text-cream-50 text-2xl md:text-4xl font-bold">私たちが、あなたに伴走します。</h3>
-        </div>
-      </div>
-
-      <div className="max-w-6xl mx-auto px-6 md:px-12 py-20 md:py-28 relative z-10">
-        {/* Counter + hint */}
-        <div className="flex items-center justify-between mb-8">
-          <div className="font-cinzel text-ink flex items-end gap-2">
-            <span className="text-5xl md:text-6xl font-bold text-gold-500 leading-none tabular-nums">
-              {String(active + 1).padStart(2, '0')}
-            </span>
-            <span className="text-stone-400 text-lg md:text-xl mb-1">/ {String(len).padStart(2, '0')}</span>
+    <section id="members" className="py-24 md:py-32 bg-base-100 border-b border-ink/10">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <AnimatedSection direction="up" delay={0.1}>
+          <div className="text-center mb-16 md:mb-20">
+            <p className="font-display tracking-[0.35em] text-oak-600 text-sm mb-5 uppercase">Member</p>
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold text-ink tracking-[0.06em]">
+              私たちが、あなたに伴走します。
+            </h2>
+            <span className="block w-10 h-px bg-oak-500/60 mx-auto mt-7"></span>
           </div>
-          <div className="hidden sm:flex items-center gap-2 text-stone-400 text-xs tracking-wider animate-pulse">
-            <MousePointerClick className="w-4 h-4" />
-            クリック / スワイプで次のメンバーへ
-          </div>
-        </div>
+        </AnimatedSection>
 
-        <div
-          className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center"
-          onTouchStart={onTouchStart}
-          onTouchEnd={onTouchEnd}
-        >
-          {/* Portrait */}
-          <div className="md:col-span-5 relative flex justify-center">
-            {/* giant index behind */}
-            <span
-              key={`num-${active}`}
-              className="pointer-events-none absolute -top-10 md:-top-14 left-1/2 -translate-x-1/2 font-cinzel font-bold text-[9rem] md:text-[12rem] leading-none text-gold-500/10 z-0"
-              style={{ animation: 'mPop 0.6s ease-out' }}
-            >
-              {active + 1}
-            </span>
-
-            <button
-              onClick={next}
-              aria-label="次のメンバー"
-              className="group relative z-10 w-full max-w-[360px] cursor-pointer"
-            >
-              <div
-                key={`img-${active}`}
-                className="relative aspect-[2/3] overflow-hidden rounded-t-[140px] rounded-b-2xl bg-gradient-to-b from-cream-50 to-gold-100 shadow-[0_24px_60px_rgba(34,26,16,0.22)] ring-1 ring-gold-500/30"
-                style={{ animation: 'mImgIn 0.7s cubic-bezier(0.22,1,0.36,1)' }}
-              >
-                <img
-                  src={`/images/photo/member/${m.file}.jpg`}
-                  alt={m.name}
-                  className="w-full h-full object-cover object-top transition-transform duration-[1.2s] group-hover:scale-105"
-                />
-                {/* gold sweep on hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-gold-500/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                {/* role chip */}
-                <div key={`chip-${active}`} className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-ink/85 backdrop-blur-sm px-4 py-1.5" style={{ animation: 'mUp 0.6s ease-out 0.25s both' }}>
-                  <span className="font-cinzel text-gold-300 text-xs tracking-[0.2em] uppercase">{m.role}</span>
+        {/* Representative — featured */}
+        <AnimatedSection direction="up" delay={0.15}>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center mb-16 md:mb-20">
+            <div className="lg:col-span-5">
+              <div className="relative max-w-[380px] mx-auto lg:mx-0">
+                <div className="absolute -top-3 -left-3 md:-top-4 md:-left-4 w-full h-full border border-oak-500/50 pointer-events-none"></div>
+                <div className="overflow-hidden">
+                  <img
+                    src={`/images/photo/member/${rep.file}.jpg`}
+                    alt={rep.name}
+                    className="w-full aspect-[3/4] object-cover object-top"
+                  />
                 </div>
               </div>
-              <span className="absolute -right-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-gold-500 text-white flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:translate-x-1 transition-all duration-300">
-                <ArrowRight className="w-5 h-5" />
-              </span>
-            </button>
-          </div>
-
-          {/* Text */}
-          <div className="md:col-span-7">
-            <div key={`role-${active}`} style={{ animation: 'mUp 0.6s ease-out both' }}>
-              <p className="font-cinzel text-gold-600 tracking-[0.25em] text-sm uppercase mb-2">{m.role}</p>
-              <p className="text-stone-500 text-sm mb-1">{m.roleJp} 担当</p>
             </div>
-            <div key={`name-${active}`} className="flex items-baseline gap-4 mb-6" style={{ animation: 'mUp 0.6s ease-out 0.08s both' }}>
-              <h3 className="font-serif text-4xl md:text-6xl font-bold text-ink">{m.name}</h3>
-              <span className="font-cinzel text-gold-500 text-lg md:text-xl tracking-widest uppercase">{m.romaji}</span>
-            </div>
-            <p key={`intro-${active}`} className="text-stone-700 text-base md:text-lg leading-relaxed mb-10 max-w-xl" style={{ animation: 'mUp 0.6s ease-out 0.16s both' }}>
-              {m.intro}
-            </p>
-
-            {/* Controls */}
-            <div className="flex items-center gap-4">
-              <button onClick={prev} aria-label="前のメンバー" className="w-12 h-12 rounded-full border border-ink/20 text-ink flex items-center justify-center hover:bg-ink hover:text-cream-50 transition-all duration-300">
-                <ArrowLeft className="w-5 h-5" />
-              </button>
-              <button onClick={next} aria-label="次のメンバー" className="w-12 h-12 rounded-full border border-ink/20 text-ink flex items-center justify-center hover:bg-ink hover:text-cream-50 transition-all duration-300">
-                <ArrowRight className="w-5 h-5" />
-              </button>
-
-              {/* Thumbnail filmstrip */}
-              <div className="flex items-center gap-2 ml-2">
-                {members.map((mm, i) => (
-                  <button
-                    key={mm.file}
-                    onClick={() => goTo(i)}
-                    aria-label={mm.name}
-                    className={`relative overflow-hidden rounded-md transition-all duration-300 ${
-                      i === active ? 'w-12 h-16 ring-2 ring-gold-500' : 'w-10 h-14 opacity-60 hover:opacity-100'
-                    }`}
-                  >
-                    <img
-                      src={`/images/photo/member/${mm.file}.jpg`}
-                      alt={mm.name}
-                      className={`w-full h-full object-cover object-top ${i === active ? '' : 'grayscale hover:grayscale-0'}`}
-                    />
-                  </button>
-                ))}
+            <div className="lg:col-span-7">
+              <p className="font-display tracking-[0.3em] text-oak-600 text-xs uppercase mb-4">{rep.roleEn}</p>
+              <p className="text-stone-500 text-sm mb-2">{rep.roleJp}</p>
+              <div className="flex items-baseline gap-4 mb-7">
+                <h3 className="font-serif text-3xl md:text-4xl font-semibold text-ink">{rep.name}</h3>
+                <span className="font-display text-oak-500 text-base md:text-lg tracking-[0.15em] uppercase">{rep.romaji}</span>
               </div>
-            </div>
-
-            {/* neighbor hint */}
-            <div className="hidden md:flex items-center justify-between mt-8 text-xs text-stone-400 font-cinzel tracking-wider max-w-xl">
-              <span className="uppercase">← {prevM.romaji}</span>
-              <span className="uppercase">{nextM.romaji} →</span>
+              <p className="text-stone-600 leading-[2.1] text-[0.95rem] md:text-base max-w-xl">{rep.intro}</p>
             </div>
           </div>
+        </AnimatedSection>
+
+        {/* Team grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-t border-l border-ink/10">
+          {members.map((m, i) => (
+            <AnimatedSection key={m.file} direction="up" delay={0.15 + i * 0.08} className="border-r border-b border-ink/10">
+              <div className="h-full p-6 md:p-8">
+                <div className="overflow-hidden mb-6">
+                  <img
+                    src={`/images/photo/member/${m.file}.jpg`}
+                    alt={m.name}
+                    className="w-full aspect-[3/4] object-cover object-top"
+                  />
+                </div>
+                <p className="font-display tracking-[0.2em] text-oak-600 text-[0.7rem] uppercase mb-2">{m.roleEn}</p>
+                <p className="text-stone-500 text-xs mb-2 leading-relaxed">{m.roleJp}</p>
+                <h3 className="font-serif text-xl font-semibold text-ink mb-1">{m.name}</h3>
+                <p className="font-display text-oak-500 text-xs tracking-[0.12em] uppercase mb-4">{m.romaji}</p>
+                <p className="text-stone-600 leading-[1.9] text-sm">{m.intro}</p>
+              </div>
+            </AnimatedSection>
+          ))}
         </div>
       </div>
-
-      <style dangerouslySetInnerHTML={{ __html: `
-        @keyframes mImgIn {
-          0% { opacity: 0; clip-path: inset(0 0 0 100%); transform: scale(1.06); }
-          100% { opacity: 1; clip-path: inset(0 0 0 0); transform: scale(1); }
-        }
-        @keyframes mUp {
-          0% { opacity: 0; transform: translateY(22px); }
-          100% { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes mPop {
-          0% { opacity: 0; transform: translate(-50%, 12px) scale(0.8); }
-          100% { opacity: 1; transform: translate(-50%, 0) scale(1); }
-        }
-      `}} />
     </section>
   );
 };

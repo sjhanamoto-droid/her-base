@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SectionTitle from './SectionTitle';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Plus } from 'lucide-react';
 
 const faqs = [
   {
@@ -17,11 +17,19 @@ const faqs = [
   },
   {
     q: '費用はかかりますか？',
-    a: '有料の会員制コミュニティです。お申し込みと面談は無料で、ご入会後に会員費をいただく形を予定しています。まずはゲストとして体験いただける仕組みも検討中です。（料金は確定し次第ご案内します）',
+    a: '有料の会員制コミュニティで、月額会費は4,980円（税込）です。会員限定コンテンツの視聴、オンライン企画・座談会、会員コミュニティ、経験シェア・悩み相談などが含まれます。税務・キャリア相談やリトリート等の個別サービスは、OPTION（別料金）でご利用いただけます。',
+  },
+  {
+    q: '孤独を感じていなくても、参加していいですか？',
+    a: 'もちろんです。HER BASE は「孤独を埋めるだけの場所」ではありません。支えながら自分の人生も大切にしたい、自分の選択肢を広げたい——そんな前向きな想いのある方こそ、歓迎しています。',
+  },
+  {
+    q: '「挑戦する」とは、具体的に何をするのですか？',
+    a: 'HERBASE MINDSET（支え方や関係性を学ぶ）と HERBASE LIFE DESIGN（キャリア・お金・健康・夫婦関係など、自分に必要なテーマを選んで学ぶ）の2つの軸で、自分の人生の選択肢を少しずつ広げていきます。大きなことでなくても、あなたのペースで大丈夫です。',
   },
   {
     q: '地方に住んでいても参加できますか？',
-    a: 'もちろんです。お話会や専門家との対談配信、税理士相談会などはオンラインを中心に行いますので、全国どこからでもご参加いただけます。',
+    a: 'もちろんです。学びのコンテンツやオンライン企画・座談会はオンライン中心に行いますので、全国どこからでもご参加いただけます。',
   },
   {
     q: '家庭や周囲に知られずに相談できますか？',
@@ -33,24 +41,27 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, ans
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-cream-50 rounded-lg shadow-sm border border-black/5 overflow-hidden">
+    <div className="border-b border-ink/10">
       <button
-        className="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none gap-4"
+        className="w-full py-6 text-left flex justify-between items-center gap-4 focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="font-bold text-ink flex items-start">
-          <span className="text-gold-600 mr-3 text-xl font-cinzel leading-none">Q.</span>
+        <span className="flex items-baseline text-ink font-medium text-[0.95rem] md:text-base">
+          <span className="font-display text-oak-600 mr-4 text-lg leading-none">Q.</span>
           {question}
         </span>
-        {isOpen ? <ChevronUp className="text-gold-500 flex-shrink-0" /> : <ChevronDown className="text-stone-400 flex-shrink-0" />}
+        <Plus
+          className={`w-5 h-5 flex-shrink-0 text-oak-600 transition-transform duration-300 ${isOpen ? 'rotate-45' : ''}`}
+          strokeWidth={1.5}
+        />
       </button>
       <div
-        className={`px-6 transition-all duration-300 ease-in-out ${
-          isOpen ? 'max-h-96 py-4 opacity-100' : 'max-h-0 py-0 opacity-0'
-        } bg-cream-100`}
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? 'max-h-96 pb-6 opacity-100' : 'max-h-0 opacity-0'
+        }`}
       >
-        <p className="text-stone-700 text-sm leading-relaxed whitespace-pre-line">
-          <span className="font-bold text-gold-600 mr-3 font-cinzel">A.</span>
+        <p className="text-stone-600 text-sm leading-[2] pl-8 pr-2 whitespace-pre-line">
+          <span className="font-display text-oak-600 mr-3">A.</span>
           {answer}
         </p>
       </div>
@@ -60,10 +71,10 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, ans
 
 const FAQ: React.FC = () => {
   return (
-    <section id="faq" className="py-24 bg-cream-100">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="py-24 md:py-28 bg-base-50">
+      <div className="max-w-3xl mx-auto px-6 lg:px-8">
         <SectionTitle en="FAQ" ja="よくある質問" />
-        <div className="space-y-4">
+        <div className="border-t border-ink/10">
           {faqs.map((item, idx) => (
             <FAQItem key={idx} question={item.q} answer={item.a} />
           ))}

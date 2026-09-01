@@ -13,46 +13,45 @@ const Header: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: 'CONCEPT', href: '#concept' },
-    { name: 'MESSAGE', href: '#message' },
-    // { name: 'MEMBER', href: '#members' }, // Members セクション非表示に伴い一旦非表示
-    { name: 'SERVICE', href: '#service' },
-    { name: 'FLOW', href: '#flow' },
+    { name: 'ABOUT', href: '#about' },
+    { name: 'PROGRAM', href: '#program' },
+    { name: 'VOICE', href: '#voice' },
     { name: 'FAQ', href: '#faq' },
   ];
 
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-black/10 ${
-          isScrolled || isMobileMenuOpen ? 'bg-cream-50 py-3' : 'bg-cream-50/85 backdrop-blur-sm py-4'
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+          isScrolled || isMobileMenuOpen
+            ? 'bg-base-100/95 backdrop-blur-sm border-b border-ink/10 py-4'
+            : 'bg-transparent py-5 md:py-7'
         }`}
       >
-        <div className="max-w-[1920px] mx-auto px-6 lg:px-12 flex justify-between items-center">
+        <div className="max-w-[1760px] mx-auto px-6 lg:px-12 flex justify-between items-center">
           {/* Logo */}
-          <a href="#top" className="flex items-center gap-3">
-            <img src="/images/logo.png" alt="HER BASE" className="h-11 md:h-14 w-auto" />
+          <a href="#top" className="font-display text-[1.45rem] md:text-[1.7rem] tracking-[0.3em] text-ink leading-none">
+            HERBASE
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center space-x-10 lg:space-x-12">
+          <nav className="hidden md:flex items-center gap-10 lg:gap-12">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-cinzel font-bold tracking-[0.15em] text-ink hover:text-gold-600 transition-colors relative group"
+                className="text-xs tracking-[0.25em] text-ink/70 hover:text-ink transition-colors"
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-500 transition-all group-hover:w-full"></span>
               </a>
             ))}
             <a
               href={PREREGISTER_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-ink text-cream-50 px-6 py-2.5 text-sm font-cinzel font-bold tracking-[0.15em] hover:bg-gold-500 transition-colors"
+              className="bg-ink text-base-50 px-7 py-3 text-xs tracking-[0.22em] hover:bg-ink/80 transition-colors"
             >
-              お悩み相談
+              ご相談はこちら
             </a>
           </nav>
 
@@ -65,29 +64,27 @@ const Header: React.FC = () => {
 
       {/* Mobile Nav Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-cream-50 flex flex-col pt-24 px-6">
-          <div className="flex justify-center mb-8">
-            <img src="/images/logo.png" alt="HER BASE" className="h-20 w-auto" />
-          </div>
+        <div className="fixed inset-0 z-40 bg-base-100 flex flex-col pt-28 px-8">
+          <p className="font-display text-2xl tracking-[0.3em] text-ink text-center mb-10">HERBASE</p>
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-3xl font-cinzel font-bold text-ink py-4 border-b border-black/10 hover:text-gold-600 uppercase tracking-wider"
+              className="font-display text-2xl tracking-[0.2em] text-ink py-5 border-b border-ink/10"
             >
               {link.name}
             </a>
           ))}
-          <div className="mt-8">
+          <div className="mt-10">
             <a
               href={PREREGISTER_URL}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block text-center w-full bg-ink text-cream-50 py-4 text-lg font-cinzel font-bold tracking-[0.15em]"
+              className="block text-center w-full bg-ink text-base-50 py-4 text-sm tracking-[0.22em]"
             >
-              お悩み相談
+              ご相談はこちら
             </a>
           </div>
         </div>

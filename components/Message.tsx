@@ -4,55 +4,49 @@ import { REP_TITLE, REP_NAME } from '../constants';
 
 const Message: React.FC = () => {
   return (
-    <section id="message" className="py-24 md:py-32 border-b border-black/10 bg-cream-50 relative overflow-hidden">
-      <h2 className="text-6xl md:text-9xl font-cinzel font-bold text-gold-500/10 uppercase tracking-tight absolute top-16 left-6 md:left-12 pointer-events-none select-none">
-        Message
-      </h2>
-
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+    <section id="message" className="py-24 md:py-32 border-b border-ink/10 bg-base-50">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Photo */}
-          <AnimatedSection direction="right" delay={0.2} className="lg:col-span-6">
+          <AnimatedSection direction="right" delay={0.15} className="lg:col-span-6">
             <div className="relative">
-              <div className="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-gold-500 pointer-events-none"></div>
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-gold-500 pointer-events-none"></div>
-              <div className="overflow-hidden shadow-[0_20px_60px_rgba(34,26,16,0.18)]">
+              <div className="absolute -top-3 -left-3 md:-top-4 md:-left-4 w-full h-full border border-oak-500/50 pointer-events-none"></div>
+              <div className="overflow-hidden">
                 <img
                   src="/images/photo/ceo.jpg"
-                  alt="HER BASE 代表"
-                  className="w-full h-[320px] md:h-[460px] object-cover object-center hover:scale-105 transition-transform duration-[1.2s]"
+                  alt="HERBASE 代表"
+                  className="w-full h-[320px] md:h-[460px] object-cover object-center hover:scale-[1.03] transition-transform duration-[1.4s]"
                 />
               </div>
             </div>
           </AnimatedSection>
 
           {/* Message */}
-          <AnimatedSection direction="left" delay={0.35} className="lg:col-span-6">
-            <p className="font-cinzel text-gold-600 tracking-[0.25em] text-sm mb-4 uppercase">Message</p>
-            <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight text-ink mb-8">
-              私も、ひとりで<br />抱えていました。
+          <AnimatedSection direction="left" delay={0.3} className="lg:col-span-6">
+            <p className="font-display tracking-[0.35em] text-oak-600 text-sm mb-6 uppercase">Message</p>
+            <h3 className="font-serif text-3xl md:text-4xl font-semibold leading-[1.7] tracking-[0.06em] text-ink mb-9">
+              支える側から、<br />挑戦する側へ。
             </h3>
-            <div className="space-y-5 text-stone-700 leading-relaxed text-base md:text-lg">
+            <div className="space-y-6 text-stone-600 leading-[2.1] text-[0.95rem] md:text-base">
               <p>
-                アスリートを支える立場を、誰よりも近くで経験してきました。
-                誇らしい一方で、まわりには言えない不安や孤独を、
-                ずっとひとりで抱えていた時期があります。
+                アスリートである夫と結婚して16年間、選手の妻として競技生活を支えてきました。
+                誇らしい毎日でしたが、気づけば自分の仕事ややりたいことは、
+                いつも後回しになっていました。
               </p>
               <p>
-                同じ立場の人と、ただ安心して話せる場所があれば——。
-                そう強く願ったことが、HER BASE のはじまりです。
-                <span className="text-ink font-bold">あなたは、ひとりじゃない</span>、ということを伝えたい。
+                夫には「挑戦する」という目標がある。でも私は「支える妻」であることに精一杯で、
+                自分がどんな人生を生きたいのかを、考える機会がほとんどありませんでした。
+                そんな時ふと、<span className="text-ink font-bold">「私も、自分自身の人生に挑戦したい」</span>と思うようになりました。
               </p>
-              <p className="text-ink font-bold border-l-4 border-gold-500 pl-6 py-1">
-                ここは、アスリートを支えるあなたが、安心してつながり、前を向くための拠点（ベース）です。
-                かつての私と同じ想いを抱えるあなたと、一緒にはじめたい。心から、そう願っています。
+              <p className="text-ink font-medium border-l border-oak-500 pl-6 py-1 leading-[2]">
+                支えることと、自分の人生を大切にすることは、両立できる。
+                お互いの挑戦を応援し合える関係を、つくることができる。
+                同じ立場にいるあなたと、その一歩を一緒に踏み出したい。それが HER BASE です。
               </p>
             </div>
-            <div className="mt-8 flex items-end gap-4">
-              <div>
-                <p className="font-cinzel text-gold-600 text-xs tracking-[0.2em] uppercase mb-1">{REP_TITLE}</p>
-                <p className="font-serif text-2xl md:text-3xl font-bold text-ink">{REP_NAME}</p>
-              </div>
+            <div className="mt-10">
+              <p className="font-display text-oak-600 text-xs tracking-[0.3em] uppercase mb-2">{REP_TITLE}</p>
+              <p className="font-serif text-2xl md:text-3xl font-semibold text-ink">{REP_NAME}</p>
             </div>
           </AnimatedSection>
         </div>

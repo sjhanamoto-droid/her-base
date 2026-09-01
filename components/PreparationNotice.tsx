@@ -35,20 +35,20 @@ const PreparationNotice: React.FC = () => {
             className="absolute inset-0 bg-ink/70 backdrop-blur-sm"
             onClick={() => setIsModalOpen(false)}
           ></div>
-          <div className="relative bg-cream-50 max-w-md w-full shadow-2xl border border-gold-200 animate-fade-in">
-            {/* ゴールドのトップアクセント */}
-            <div className="h-1 w-full bg-gold-500"></div>
+          <div className="relative bg-base-100 max-w-md w-full shadow-2xl border border-ink/15 animate-fade-in">
+            {/* トップアクセント */}
+            <div className="h-px w-full bg-ink"></div>
 
             <button
               onClick={() => setIsModalOpen(false)}
-              className="absolute top-4 right-4 text-stone-500 hover:text-gold-600 transition-colors"
+              className="absolute top-4 right-4 text-stone-500 hover:text-ink transition-colors"
               aria-label="閉じる"
             >
               <X className="w-6 h-6" />
             </button>
 
             <div className="px-8 py-10 text-center">
-              <span className="inline-block border border-gold-500 text-gold-700 bg-cream-50 px-3 py-1 text-[0.65rem] font-bold tracking-[0.2em] mb-6 uppercase font-cinzel">
+              <span className="inline-block border border-ink/50 text-ink px-3 py-1 text-[0.65rem] tracking-[0.25em] mb-6 uppercase font-display">
                 Coming Soon
               </span>
 
@@ -67,7 +67,7 @@ const PreparationNotice: React.FC = () => {
 
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="inline-flex items-center justify-center bg-ink text-cream-50 px-8 py-3 text-sm font-cinzel font-bold tracking-[0.15em] uppercase hover:bg-gold-500 transition-colors"
+                className="inline-flex items-center justify-center bg-ink text-base-50 px-8 py-3 text-sm tracking-[0.2em] hover:bg-ink/80 transition-colors"
               >
                 サイトを見る
               </button>
@@ -78,8 +78,8 @@ const PreparationNotice: React.FC = () => {
 
       {/* 常時表示の右上アラート：内容が変更される可能性 */}
       <div className="fixed top-20 md:top-24 right-3 md:right-5 z-30 max-w-[15rem] md:max-w-xs pointer-events-none">
-        <div className="flex items-start gap-2 bg-cream-50/95 backdrop-blur-sm border border-gold-300 shadow-lg px-3 py-2">
-          <Info className="w-4 h-4 text-gold-600 mt-0.5 flex-shrink-0" />
+        <div className="flex items-start gap-2 bg-base-100/95 backdrop-blur-sm border border-ink/20 shadow-lg px-3 py-2">
+          <Info className="w-4 h-4 text-oak-600 mt-0.5 flex-shrink-0" />
           <p className="text-[0.7rem] leading-relaxed text-ink font-medium">
             準備中のサイトのため、内容が変更される可能性があります。
           </p>

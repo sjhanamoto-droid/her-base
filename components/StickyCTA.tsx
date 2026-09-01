@@ -18,9 +18,9 @@ const StickyCTA: React.FC = () => {
         href={PREREGISTER_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="block w-full bg-ink text-cream-50 py-4 text-center font-cinzel font-bold tracking-[0.15em] shadow-[0_-4px_20px_rgba(0,0,0,0.15)]"
+        className="block w-full bg-ink text-base-50 py-4 text-center text-sm tracking-[0.22em] shadow-[0_-4px_20px_rgba(0,0,0,0.15)]"
       >
-        お悩み相談はこちら
+        まずはご相談ください
       </a>
     </div>
   );

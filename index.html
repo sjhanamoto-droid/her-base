@@ -12,7 +12,7 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="shortcut icon" href="/favicon.png" />
-    <meta name="theme-color" content="#b78829" />
+    <meta name="theme-color" content="#f3efe8" />
 
     <!-- OGP -->
     <meta property="og:type" content="website" />
@@ -24,7 +24,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Allura&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
@@ -58,12 +58,28 @@
                 800: '#2e2417',
                 700: '#3d3120',
               },
+              // リニューアル後のベース（生成り）とトープ系アクセント
+              base: {
+                50:  '#f8f6f1',
+                100: '#f3efe8',
+                200: '#eae4d9',
+                300: '#ddd5c6',
+              },
+              oak: {
+                300: '#c2b39f',
+                400: '#a6957f',
+                500: '#8b7c6b',
+                600: '#6f6355',
+                700: '#574d42',
+              },
             },
             fontFamily: {
-              serif: ['"Playfair Display"', '"Shippori Mincho"', 'serif'],
+              serif: ['"Shippori Mincho"', '"Playfair Display"', 'serif'],
               sans: ['"Zen Kaku Gothic New"', 'sans-serif'],
               mincho: ['"Shippori Mincho"', 'serif'],
               cinzel: ['"Cinzel"', 'serif'],
+              display: ['"Cormorant Garamond"', 'serif'],
+              script: ['"Allura"', 'cursive'],
             },
             keyframes: {
               fadeIn: {
@@ -78,10 +94,12 @@
     <style>
       body {
         font-family: 'Zen Kaku Gothic New', sans-serif;
-        background-color: #fdf8ef;
+        background-color: #f3efe8;
       }
       .font-cinzel { font-family: 'Cinzel', serif; }
       .font-mincho { font-family: 'Shippori Mincho', serif; }
+      .font-display { font-family: 'Cormorant Garamond', serif; }
+      .font-script { font-family: 'Allura', cursive; }
       .animate-fade-in {
         animation: fadeIn 1s ease-out forwards;
         opacity: 0;
@@ -94,7 +112,7 @@
         -webkit-text-stroke: 1px #b78829;
         color: transparent;
       }
-      ::selection { background: #e8cf94; color: #523c1b; }
+      ::selection { background: #eae4d9; color: #221a10; }
     </style>
     <link rel="stylesheet" href="./index.css">
   </head>
