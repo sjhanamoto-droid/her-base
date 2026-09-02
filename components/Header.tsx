@@ -13,10 +13,10 @@ const Header: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: 'VOICE', href: '#voice' },
-    { name: 'PROGRAM', href: '#program' },
-    { name: 'ABOUT', href: '#about' },
-    { name: 'FAQ', href: '#faq' },
+    { name: 'メッセージ', href: '#message' },
+    { name: 'プログラム', href: '#program' },
+    { name: 'HERBASEについて', href: '#about' },
+    { name: 'よくある質問', href: '#faq' },
   ];
 
   return (
@@ -40,7 +40,7 @@ const Header: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-xs tracking-[0.25em] text-ink/70 hover:text-ink transition-colors"
+                className="text-xs tracking-[0.1em] text-ink/70 hover:text-ink transition-colors whitespace-nowrap"
               >
                 {link.name}
               </a>
@@ -71,7 +71,7 @@ const Header: React.FC = () => {
               key={link.name}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="font-display text-2xl tracking-[0.2em] text-ink py-5 border-b border-ink/10"
+              className="font-display text-2xl tracking-[0.08em] text-ink py-5 border-b border-ink/10"
             >
               {link.name}
             </a>

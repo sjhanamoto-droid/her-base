@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { PREREGISTER_URL } from '../constants';
 
 const STRIP_WORDS = ['Challenge Together', 'Design Your Life', 'Mindset', 'Life Design', 'Not Alone'];
 
@@ -59,8 +58,8 @@ const Hero: React.FC = () => {
       <div className="relative z-10 flex-1 flex items-end md:items-center">
         <div className="w-full max-w-[1760px] mx-auto px-6 md:px-12 lg:px-20 pb-24 md:pb-16 pt-32 md:pt-40">
           <div className="max-w-2xl">
-            <p className="text-[0.68rem] md:text-xs tracking-[0.35em] text-ink/80 mb-5 md:mb-7" style={ease(0.15)}>
-              MEMBERSHIP / LIFE SUPPORT SERVICE
+            <p className="text-[0.72rem] md:text-[0.85rem] tracking-[0.08em] leading-[1.9] text-ink/80 mb-5 md:mb-7" style={ease(0.15)}>
+              現役プロアスリートを支える妻・パートナーのための、審査制の会員制ライフサポートサービス
             </p>
 
             <h1
@@ -82,26 +81,23 @@ const Hero: React.FC = () => {
               className="font-serif text-[0.95rem] md:text-lg leading-[2.1] tracking-[0.05em] text-ink/85 mb-10 md:mb-12"
               style={ease(0.6)}
             >
-              アスリートの挑戦を、そばで支えるあなたへ。<br />
-              自分の人生も、あきらめない。<br />
-              一人じゃない。あなたの人生は、もっと自由にデザインできる。
+              選手の結果や感情まで背負い、自分自身の人生を後回しにしていませんか。<br />
+              HERBASEは、同じ立場の人だからこそ安心して話せる、審査制の会員制ライフサポートサービスです。
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-5" style={ease(0.75)}>
+            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-5" style={ease(0.75)}>
               <a
-                href="#about"
-                className="group inline-flex items-center justify-between gap-8 bg-ink text-base-50 px-8 py-4 text-[0.8rem] tracking-[0.2em] hover:bg-ink/80 transition-colors"
+                href="#join"
+                className="group inline-flex items-center justify-between gap-6 whitespace-nowrap bg-ink text-base-50 px-8 py-4 text-[0.8rem] tracking-[0.15em] hover:bg-ink/80 transition-colors"
               >
-                HERBASEについて
+                先行会員(Founding Member)の案内を受け取る
                 <span className="transition-transform duration-300 group-hover:translate-x-1.5">→</span>
               </a>
               <a
-                href={PREREGISTER_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center justify-between gap-8 border border-ink/60 text-ink bg-base-50/40 px-8 py-4 text-[0.8rem] tracking-[0.2em] hover:bg-ink hover:text-base-50 transition-colors"
+                href="#message"
+                className="group inline-flex items-center justify-between gap-6 whitespace-nowrap border border-ink/60 text-ink bg-base-50/40 px-8 py-4 text-[0.8rem] tracking-[0.15em] hover:bg-ink hover:text-base-50 transition-colors"
               >
-                お問い合わせはこちら
+                HERBASEについて
                 <span className="transition-transform duration-300 group-hover:translate-x-1.5">→</span>
               </a>
             </div>

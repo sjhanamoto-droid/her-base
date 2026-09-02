@@ -8,13 +8,13 @@ const Footer: React.FC = () => {
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
 
   const menu = [
-    { label: 'About', href: '#about' },
-    { label: 'Concept', href: '#concept' },
-    { label: 'Program', href: '#program' },
-    { label: 'Membership', href: '#membership' },
-    { label: 'Voice', href: '#voice' },
-    { label: 'Flow', href: '#flow' },
-    { label: 'FAQ', href: '#faq' },
+    { label: 'HERBASEについて', href: '#about' },
+    { label: 'コンセプト', href: '#concept' },
+    { label: 'プログラム', href: '#program' },
+    { label: 'ご入会について', href: '#membership' },
+    { label: '会員の声', href: '#voice' },
+    { label: 'ご入会までの流れ', href: '#flow' },
+    { label: 'よくある質問', href: '#faq' },
   ];
 
   return (
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <p className="font-display tracking-[0.25em] uppercase mb-5 text-oak-600 text-sm">Menu</p>
+            <p className="font-display tracking-[0.25em] uppercase mb-5 text-oak-600 text-sm">メニュー</p>
             <ul className="space-y-2.5 text-sm text-stone-600">
               {menu.map((m) => (
                 <li key={m.label}>
@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <p className="font-display tracking-[0.25em] uppercase mb-5 text-oak-600 text-sm">Legal</p>
+            <p className="font-display tracking-[0.25em] uppercase mb-5 text-oak-600 text-sm">規約</p>
             <ul className="space-y-2.5 text-sm text-stone-600">
               <li>
                 <button onClick={() => setIsLegalOpen(true)} className="hover:text-ink transition-colors cursor-pointer text-left">
