@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
 
   const menu = [
-    { label: 'HERBASEについて', href: '#about' },
+    { label: 'HERBASEについて', href: '#concept' },
     { label: 'コンセプト', href: '#concept' },
     { label: 'ご入会について', href: '#membership' },
     { label: '共通の悩み', href: '#voice' },

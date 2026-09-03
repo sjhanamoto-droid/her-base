@@ -14,7 +14,7 @@ const Header: React.FC = () => {
 
   const navLinks = [
     { name: 'メッセージ', href: '#message' },
-    { name: 'HERBASEについて', href: '#about' },
+    { name: 'HERBASEについて', href: '#concept' },
     { name: 'よくある質問', href: '#faq' },
   ];
 
