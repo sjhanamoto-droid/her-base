@@ -18,7 +18,8 @@ const Voices: React.FC = () => {
               選手の結果や感情まで背負い、自分自身の人生を後回しにしていませんか。
             </p>
             <h2 className="font-serif text-[1.9rem] md:text-4xl lg:text-[2.9rem] font-semibold text-ink tracking-[0.04em] leading-[1.6] md:leading-[1.6]">
-              「孤独」とはちがう、深く話せる相手がいないこと。
+              「孤独」とはちがう、<br />
+              深く話せる相手がいないこと。
             </h2>
           </AnimatedSection>
 
