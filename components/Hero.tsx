@@ -82,8 +82,8 @@ const Hero: React.FC = () => {
               className="font-serif text-[0.95rem] md:text-lg leading-[2.1] tracking-[0.05em] text-ink/85 mb-10 md:mb-12"
               style={ease(0.6)}
             >
-              選手の結果や感情まで背負い、自分自身の人生を後回しにしていませんか。<br />
-              HERBASEは、同じ立場の人だからこそ安心して話せる、審査制の会員制ライフサポートサービスです。
+              支える人生と、自分の人生を両立する。<br />
+              HERBASEは、現役プロアスリートの妻・パートナーのための審査制ライフサポートサービスです。
             </p>
 
             <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-5" style={ease(0.75)}>
@@ -91,7 +91,7 @@ const Hero: React.FC = () => {
                 href="#join"
                 className="group inline-flex items-center justify-between gap-6 whitespace-nowrap bg-ink text-base-50 px-8 py-4 text-[0.8rem] tracking-[0.15em] hover:bg-ink/80 transition-colors"
               >
-                先行会員(Founding Member)の案内を受け取る
+                先行会員の案内を受け取る
                 <span className="transition-transform duration-300 group-hover:translate-x-1.5">→</span>
               </a>
               <a
