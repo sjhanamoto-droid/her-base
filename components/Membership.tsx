@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, ShieldCheck } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 import Button from './ui/Button';
 import AnimatedSection from './AnimatedSection';
 
@@ -9,14 +9,6 @@ const includes = [
   '会員どうしの交流の場への参加',
   '経験シェア・悩み相談',
   'イベント・セミナーの優先案内',
-];
-
-const recommend = [
-  '夫（パートナー）がアスリートで、毎日を支えている',
-  '選手の結果や環境の変化に、気持ちが揺れることがある',
-  '自分の仕事やキャリアも大切にしたい',
-  '同じ立場の人と出会い、つながりたい',
-  '自分の人生の選択肢を広げてみたい',
 ];
 
 const Membership: React.FC = () => {
@@ -31,10 +23,10 @@ const Membership: React.FC = () => {
           </div>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+        <div className="max-w-2xl mx-auto">
           {/* Price card */}
           <AnimatedSection direction="right" delay={0.2}>
-            <div className="h-full bg-base-100 border border-ink/10 p-8 md:p-12">
+            <div className="bg-base-100 border border-ink/10 p-8 md:p-12">
               <span className="inline-flex items-center gap-2 border border-ink/60 text-ink text-xs tracking-[0.15em] px-3 py-1.5 mb-7">
                 <ShieldCheck className="w-4 h-4" strokeWidth={1.5} /> 審査制・会員制サービス
               </span>
@@ -53,21 +45,7 @@ const Membership: React.FC = () => {
                 ))}
               </ul>
               <p className="mt-7 text-xs text-stone-500">※OPTIONサービスは別料金となります。</p>
-            </div>
-          </AnimatedSection>
 
-          {/* Recommend */}
-          <AnimatedSection direction="left" delay={0.3}>
-            <div className="h-full bg-base-200/60 border border-ink/10 p-8 md:p-12 flex flex-col">
-              <h3 className="font-serif text-xl md:text-2xl font-semibold text-ink mb-8">こんな方におすすめです</h3>
-              <ul className="space-y-4 flex-1">
-                {recommend.map((r, i) => (
-                  <li key={i} className="flex items-start">
-                    <Check className="w-4 h-4 text-oak-600 mr-3 mt-1.5 flex-shrink-0" strokeWidth={2} />
-                    <span className="text-[0.95rem] md:text-base text-stone-600 leading-[1.9]">{r}</span>
-                  </li>
-                ))}
-              </ul>
               <div className="mt-10">
                 <Button variant="ink" size="lg" withArrow fullWidth>
                   お問い合わせ
