@@ -6,7 +6,6 @@ import { PREREGISTER_URL } from '../constants';
 const perks = [
   '面談で、疑問や不安をご相談いただけます',
   'あなたに合う場所かを、一緒に確認します',
-  'ゲストとしての体験参加もご案内可能です',
 ];
 
 const Join: React.FC = () => {
