@@ -10,9 +10,8 @@ const Footer: React.FC = () => {
   const menu = [
     { label: 'HERBASEについて', href: '#about' },
     { label: 'コンセプト', href: '#concept' },
-    { label: 'プログラム', href: '#program' },
     { label: 'ご入会について', href: '#membership' },
-    { label: '会員の声', href: '#voice' },
+    { label: '共通の悩み', href: '#voice' },
     { label: 'ご入会までの流れ', href: '#flow' },
     { label: 'よくある質問', href: '#faq' },
   ];

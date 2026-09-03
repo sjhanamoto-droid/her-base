@@ -5,7 +5,6 @@ import Concept from './components/Concept';
 import Pillars from './components/Pillars';
 import Message from './components/Message';
 import Members from './components/Members';
-import Services from './components/Services';
 import Voices from './components/Voices';
 import Membership from './components/Membership';
 import Join from './components/Join';
@@ -24,7 +23,6 @@ const App: React.FC = () => {
         <Message />
         <Voices />
         <Pillars />
-        <Services />
         <Concept />
         <Members />
         <Membership />

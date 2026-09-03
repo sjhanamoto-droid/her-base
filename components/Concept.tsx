@@ -1,10 +1,19 @@
 import React from 'react';
 import AnimatedSection from './AnimatedSection';
 
-const pillars = [
-  { title: 'SAFE PLACE', jp: '安心できる居場所', desc: '審査制・ニックネーム参加可能。アスリートを支える人だけが集う、安心の場所。' },
-  { title: 'CONNECTION', jp: '同じ立場のつながり', desc: '同じ環境にいる仲間だから、本音で話せる。' },
-  { title: 'A STEP FORWARD', jp: '自分の人生への挑戦', desc: '体験のシェアや専門家の知恵から、自分の人生の選択肢を広げ、挑戦する一歩を。' },
+const commitments = [
+  {
+    title: '入会審査による、安心できる環境',
+    desc: '対象を現役プロアスリートの妻・パートナーに限定することで、一般的なSNSでは話しにくい経験も共有できる、信頼性の高いクローズドな場をつくっています。',
+  },
+  {
+    title: '匿名性とプライバシーへの配慮',
+    desc: '選手やご本人を特定できる情報については、本人の意思と同意を前提に取り扱います。安心して話せることを何より優先します。',
+  },
+  {
+    title: '16年間の当事者経験という原点',
+    desc: '創業者自身がプロアスリートの妻として16年間歩んできた経験と、複数競技のパートナーへの継続的な顧客インタビューが、HERBASEの土台になっています。',
+  },
 ];
 
 const Concept: React.FC = () => {
@@ -62,27 +71,20 @@ const Concept: React.FC = () => {
       <section id="concept" className="bg-base-50 py-24 md:py-32 border-b border-ink/10">
         <div className="max-w-[1760px] mx-auto px-6 md:px-12">
           <AnimatedSection direction="up" delay={0.15}>
-            <div className="mb-16 md:mb-20 max-w-3xl">
-              <p className="font-display tracking-[0.35em] text-oak-600 text-sm uppercase mb-6">Concept</p>
-              <h3 className="font-display text-4xl md:text-5xl lg:text-6xl tracking-[0.08em] text-ink mb-8">
-                Welcome to HERBASE
+            <div className="mb-16 md:mb-20 max-w-5xl">
+              <p className="tracking-[0.3em] text-gold-600 text-xs md:text-sm mb-7">HERBASEが大切にしていること</p>
+              <h3 className="font-serif text-3xl md:text-5xl lg:text-[3.4rem] font-semibold tracking-[0.06em] leading-[1.5] text-ink">
+                人数より、信頼と会員同士の質を。
               </h3>
-              <p className="text-stone-600 text-[0.95rem] md:text-base leading-[2.1]">
-                HERBASE は、アスリートを支える人のための審査制/会員制ライフサポートサービスです。
-                同じ立場の仲間と安心してつながりながら、
-                支えるだけでなく、自分自身の人生にも挑戦する一歩を、ともに踏み出していきます。
-              </p>
             </div>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 border-t border-l border-ink/10">
-            {pillars.map((item, i) => (
-              <AnimatedSection key={i} direction="up" delay={0.2 + i * 0.1} className="border-r border-b border-ink/10">
-                <div className="p-10 md:p-12 lg:p-14 h-full">
-                  <span className="block font-display text-4xl md:text-5xl text-oak-400 mb-8">0{i + 1}</span>
-                  <h4 className="font-display text-xl md:text-2xl tracking-[0.14em] text-ink uppercase mb-3">{item.title}</h4>
-                  <p className="font-serif font-semibold text-ink text-lg mb-5">{item.jp}</p>
-                  <p className="text-stone-600 text-sm md:text-[0.95rem] leading-[2]">{item.desc}</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 lg:gap-16">
+            {commitments.map((item, i) => (
+              <AnimatedSection key={i} direction="up" delay={0.2 + i * 0.1}>
+                <div className="h-full pt-8 border-t border-gold-500/70">
+                  <h4 className="font-serif text-lg md:text-xl font-semibold text-ink leading-[1.7] mb-5">{item.title}</h4>
+                  <p className="text-stone-600 text-sm md:text-[0.95rem] leading-[2.1]">{item.desc}</p>
                 </div>
               </AnimatedSection>
             ))}

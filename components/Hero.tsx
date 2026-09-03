@@ -91,7 +91,7 @@ const Hero: React.FC = () => {
                 href="#join"
                 className="group inline-flex items-center justify-between gap-6 whitespace-nowrap bg-ink text-base-50 px-8 py-4 text-[0.8rem] tracking-[0.15em] hover:bg-ink/80 transition-colors"
               >
-                先行会員の案内を受け取る
+                ご相談はこちら
                 <span className="transition-transform duration-300 group-hover:translate-x-1.5">→</span>
               </a>
               <a

@@ -38,10 +38,6 @@ const Membership: React.FC = () => {
               <span className="inline-flex items-center gap-2 border border-ink/60 text-ink text-xs tracking-[0.15em] px-3 py-1.5 mb-7">
                 <ShieldCheck className="w-4 h-4" strokeWidth={1.5} /> 審査制・会員制サービス
               </span>
-              <p className="text-stone-600 leading-[2] mb-8 text-[0.95rem]">
-                安心して本音で話せる環境を守るため、ご入会には審査があります。
-              </p>
-
               <div className="flex items-end gap-2 border-b border-ink/15 pb-6 mb-6">
                 <span className="text-stone-500 text-sm mb-2">月額会費</span>
                 <span className="font-display font-medium text-ink text-5xl md:text-6xl leading-none tracking-tight">4,980</span>

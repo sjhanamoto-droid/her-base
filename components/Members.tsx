@@ -24,8 +24,8 @@ const rep: Member = {
 const members: Member[] = [
   {
     file: 'kazumi',
-    name: '鳥居 かずみ',
-    romaji: 'Torii Kazumi',
+    name: '鳥尾 かずみ',
+    romaji: 'Torio Kazumi',
     roleJp: '会員体験マネージャー',
     roleEn: 'Members',
     intro:
