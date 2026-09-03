@@ -63,18 +63,19 @@ const Hero: React.FC = () => {
             </p>
 
             <h1
-              className="font-display font-medium text-[3rem] md:text-[4.4rem] lg:text-[5.2rem] tracking-[0.14em] leading-none text-ink mb-7 md:mb-10"
+              className="font-serif font-semibold text-[1.9rem] md:text-[2.6rem] lg:text-[2.9rem] tracking-[0.1em] leading-[1.55] text-ink mb-6 md:mb-8"
               style={ease(0.3)}
             >
-              HERBASE
+              アスリートを支える<br />
+              妻も、<br />
+              挑戦する人へ。
             </h1>
 
             <p
-              className="font-serif font-semibold text-[1.9rem] md:text-[2.6rem] lg:text-[2.9rem] tracking-[0.1em] leading-[1.6] text-ink mb-7 md:mb-9"
+              className="font-display font-medium text-[2.6rem] md:text-[4rem] lg:text-[4.6rem] tracking-[0.14em] leading-none text-ink mb-7 md:mb-10"
               style={ease(0.45)}
             >
-              アスリートを支える妻も、<br />
-              挑戦する人へ。
+              HERBASE
             </p>
 
             <p
