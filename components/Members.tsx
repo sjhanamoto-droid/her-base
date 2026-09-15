@@ -32,6 +32,15 @@ const members: Member[] = [
       '会員どうしの場の運営、会員同士の交流促進、オンライン・オフラインイベントの企画・調整など、会員体験の向上を担当する。',
   },
   {
+    file: 'michika',
+    name: '丸山 美翔',
+    romaji: 'Maruyama Michika',
+    roleJp: 'ライフサポート・メンター',
+    roleEn: 'Life Support',
+    intro:
+      'セルフラブを軸に、パートナーシップや仕事、人生に関する相談を通して、会員一人ひとりが自分を大切にし、自分らしい選択ができるようサポートする。',
+  },
+  {
     file: 'masaki',
     name: '花本 昌樹',
     romaji: 'Hanamoto Masaki',
@@ -102,7 +111,7 @@ const Members: React.FC = () => {
         </AnimatedSection>
 
         {/* Team grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-t border-l border-ink/10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 border-t border-l border-ink/10">
           {members.map((m, i) => (
             <AnimatedSection key={m.file} direction="up" delay={0.15 + i * 0.08} className="border-r border-b border-ink/10">
               <div className="h-full p-6 md:p-8">
