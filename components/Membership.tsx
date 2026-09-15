@@ -17,9 +17,9 @@ const Membership: React.FC = () => {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         <AnimatedSection direction="up" delay={0.1}>
           <div className="text-center mb-16">
-            <p className="font-display tracking-[0.35em] text-oak-600 text-sm mb-5 uppercase">Membership</p>
+            <p className="font-display tracking-[0.35em] text-brand-700 text-sm mb-5 uppercase">Membership</p>
             <h2 className="font-serif text-3xl md:text-4xl font-semibold text-ink tracking-[0.06em]">ご入会のご案内</h2>
-            <span className="block w-10 h-px bg-oak-500/60 mx-auto mt-7"></span>
+            <span className="block w-10 h-px bg-brand-500/60 mx-auto mt-7"></span>
           </div>
         </AnimatedSection>
 
@@ -31,23 +31,23 @@ const Membership: React.FC = () => {
                 <ShieldCheck className="w-4 h-4" strokeWidth={1.5} /> 審査制・会員制サービス
               </span>
               <div className="flex items-end gap-2 border-b border-ink/15 pb-6 mb-6">
-                <span className="text-stone-500 text-sm mb-2">月額会費</span>
+                <span className="text-ink-500 text-sm mb-2">月額会費</span>
                 <span className="font-display font-medium text-ink text-5xl md:text-6xl leading-none tracking-tight">4,980</span>
-                <span className="text-stone-600 text-sm mb-2">円（税込）</span>
+                <span className="text-ink-600 text-sm mb-2">円（税込）</span>
               </div>
 
               <ul className="space-y-3.5">
                 {includes.map((f, i) => (
-                  <li key={i} className="flex items-center text-stone-600">
-                    <span className="w-4 h-px bg-oak-500/70 mr-3 flex-shrink-0"></span>
+                  <li key={i} className="flex items-center text-ink-600">
+                    <span className="w-4 h-px bg-brand-500/70 mr-3 flex-shrink-0"></span>
                     <span className="text-sm md:text-[0.95rem]">{f}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-7 text-xs text-stone-500">※OPTIONサービスは別料金となります。</p>
+              <p className="mt-7 text-xs text-ink-500">※OPTIONサービスは別料金となります。</p>
 
               <div className="mt-10">
-                <Button variant="ink" size="lg" withArrow fullWidth>
+                <Button variant="gold" size="lg" withArrow fullWidth>
                   お問い合わせ
                 </Button>
               </div>

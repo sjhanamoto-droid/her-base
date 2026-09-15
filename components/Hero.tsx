@@ -28,14 +28,14 @@ const Hero: React.FC = () => {
         className="absolute inset-0 hidden md:block"
         style={{
           background:
-            'linear-gradient(to right, rgba(243,239,232,0.99) 0%, rgba(243,239,232,0.97) 34%, rgba(243,239,232,0.9) 46%, rgba(243,239,232,0.68) 58%, rgba(243,239,232,0.34) 70%, rgba(243,239,232,0) 82%)',
+            'linear-gradient(to right, rgba(248,244,238,0.99) 0%, rgba(248,244,238,0.97) 34%, rgba(248,244,238,0.9) 46%, rgba(248,244,238,0.68) 58%, rgba(248,244,238,0.34) 70%, rgba(248,244,238,0) 82%)',
         }}
       ></div>
       <div
         className="absolute inset-0 md:hidden"
         style={{
           background:
-            'linear-gradient(to top, rgba(243,239,232,0.98) 0%, rgba(243,239,232,0.9) 30%, rgba(243,239,232,0.35) 58%, rgba(243,239,232,0.05) 100%)',
+            'linear-gradient(to top, rgba(248,244,238,0.98) 0%, rgba(248,244,238,0.9) 30%, rgba(248,244,238,0.35) 58%, rgba(248,244,238,0.05) 100%)',
         }}
       ></div>
 
@@ -71,12 +71,15 @@ const Hero: React.FC = () => {
               挑戦する人へ。
             </h1>
 
-            <p
-              className="font-display font-medium text-[2.6rem] md:text-[4rem] lg:text-[4.6rem] tracking-[0.14em] leading-none text-ink mb-7 md:mb-10"
-              style={ease(0.45)}
-            >
-              HERBASE
-            </p>
+            <div className="mb-7 md:mb-10" style={ease(0.45)}>
+              <img
+                src="/images/logo/herbase-logo-horizontal.svg"
+                alt="HER BASE"
+                className="h-[4.2rem] md:h-24 lg:h-28 w-auto"
+                width="1664"
+                height="477"
+              />
+            </div>
 
             <p
               className="font-serif text-[0.95rem] md:text-lg leading-[2.1] tracking-[0.05em] text-ink/85 mb-10 md:mb-12"
@@ -89,7 +92,7 @@ const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-5" style={ease(0.75)}>
               <a
                 href="#join"
-                className="group inline-flex items-center justify-between gap-6 whitespace-nowrap bg-ink text-base-50 px-8 py-4 text-[0.8rem] tracking-[0.15em] hover:bg-ink/80 transition-colors"
+                className="group inline-flex items-center justify-between gap-6 whitespace-nowrap bg-brand-500 text-ink px-8 py-4 text-[0.8rem] tracking-[0.15em] hover:bg-ink hover:text-base-50 transition-colors"
               >
                 ご相談はこちら
                 <span className="transition-transform duration-300 group-hover:translate-x-1.5">→</span>
@@ -112,10 +115,10 @@ const Hero: React.FC = () => {
         <div className="hidden md:flex items-center justify-between max-w-[1760px] mx-auto px-10 lg:px-16 py-6 lg:py-7">
           {STRIP_WORDS.map((w, i) => (
             <React.Fragment key={w}>
-              <span className="font-display text-base lg:text-[1.35rem] tracking-[0.18em] uppercase text-oak-600 whitespace-nowrap">
+              <span className="font-display text-base lg:text-[1.35rem] tracking-[0.18em] uppercase text-brand-700 whitespace-nowrap">
                 {w}
               </span>
-              {i < STRIP_WORDS.length - 1 && <span className="flex-1 max-w-[64px] h-px bg-oak-500/40 mx-4 lg:mx-6"></span>}
+              {i < STRIP_WORDS.length - 1 && <span className="flex-1 max-w-[64px] h-px bg-brand-500/40 mx-4 lg:mx-6"></span>}
             </React.Fragment>
           ))}
         </div>
@@ -129,8 +132,8 @@ const Hero: React.FC = () => {
               <React.Fragment key={r}>
                 {STRIP_WORDS.map((w) => (
                   <React.Fragment key={w}>
-                    <span className="font-display text-base tracking-[0.18em] uppercase text-oak-600 mx-5">{w}</span>
-                    <span className="w-8 h-px bg-oak-500/40"></span>
+                    <span className="font-display text-base tracking-[0.18em] uppercase text-brand-700 mx-5">{w}</span>
+                    <span className="w-8 h-px bg-brand-500/40"></span>
                   </React.Fragment>
                 ))}
               </React.Fragment>

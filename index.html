@@ -6,20 +6,26 @@
     <title>HER BASE｜現役プロアスリートを支える妻・パートナーのための、審査制の会員制ライフサポートサービス</title>
     <meta name="description" content="HER BASEは、現役プロアスリートを支える妻・パートナーが安心してつながり、孤独を感じず前向きな一歩を踏み出せる、審査制の会員制ライフサポートサービスです。同じ立場の仲間との出会いや、先輩パートナーとの座談会、専門家講座をお届けします。" />
 
-    <!-- Favicon -->
+    <!-- Favicon（HERBASELOGO_260910：ゴールド地 × 白のHマーク） -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="shortcut icon" href="/favicon.png" />
-    <meta name="theme-color" content="#f3efe8" />
+    <meta name="theme-color" content="#f8f4ee" />
 
     <!-- OGP -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="HER BASE｜現役プロアスリートを支える妻・パートナーのための、審査制の会員制ライフサポートサービス" />
     <meta property="og:description" content="ひとりじゃない、と思える場所へ。現役プロアスリートを支える妻・パートナーが、同じ立場の仲間と安心してつながる、審査制の会員制ライフサポートサービス、HER BASE。" />
-    <meta property="og:image" content="/favicon-512.png" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:site_name" content="HER BASE" />
+    <meta property="og:url" content="https://her-base.com/" />
+    <meta property="og:image" content="https://her-base.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://her-base.com/og-image.png" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,47 +36,36 @@
         theme: {
           extend: {
             colors: {
-              // ロゴのゴールドを基準にしたブランドカラー
-              gold: {
-                50:  '#faf3e2',
-                100: '#f3e6c4',
-                200: '#e8cf94',
-                300: '#dab765',
-                400: '#c9a044',
-                500: '#b78829', // HER BASE ロゴのゴールド
-                600: '#9e7323',
-                700: '#7d591f',
-                800: '#63471d',
-                900: '#523c1b',
+              // ブランドカラー：ロゴ（HERBASELOGO_260910）のゴールドベージュ #C8A17B を基準に展開
+              // 500 がロゴの色そのもの。小さな文字には 700 以上、線・アイコン・ボタン地には 500 を使う。
+              brand: {
+                50:  '#faf6f1',
+                100: '#f4ebe1',
+                200: '#eadbc9',
+                300: '#dfc6aa',
+                400: '#d4b493',
+                500: '#c8a17b', // HER BASE ロゴのゴールドベージュ
+                600: '#ad8660',
+                700: '#8a6742',
+                800: '#6b5139',
+                900: '#4a3826',
               },
-              // ロゴ背景のアイボリー/クリーム
-              cream: {
-                50:  '#fdf8ef',
-                100: '#fbf1e1',
-                200: '#f6e6cd',
-                300: '#efd8b4',
-                400: '#e5c795',
-              },
-              // ウォームな黒（エスプレッソ）
-              ink: {
-                DEFAULT: '#221a10',
-                900: '#221a10',
-                800: '#2e2417',
-                700: '#3d3120',
-              },
-              // リニューアル後のベース（生成り）とトープ系アクセント
+              // ベース（生成り）：ロゴの白地に馴染む、ややウォームなオフホワイト
               base: {
-                50:  '#f8f6f1',
-                100: '#f3efe8',
-                200: '#eae4d9',
-                300: '#ddd5c6',
+                50:  '#fcfaf7',
+                100: '#f8f4ee',
+                200: '#f0e9df',
+                300: '#e4d9ca',
               },
-              oak: {
-                300: '#c2b39f',
-                400: '#a6957f',
-                500: '#8b7c6b',
-                600: '#6f6355',
-                700: '#574d42',
+              // 墨色：ロゴのゴールドと同系色相のダークブラウン（見出し・本文）
+              ink: {
+                DEFAULT: '#2a2016',
+                900: '#2a2016',
+                800: '#362a1e',
+                700: '#4a3b2c',
+                600: '#5e4d3c', // 本文
+                500: '#7a6853', // 補足テキスト
+                400: '#9b8b77', // キャプション・コピーライト
               },
             },
             fontFamily: {
@@ -94,7 +89,7 @@
     <style>
       body {
         font-family: 'Zen Kaku Gothic New', sans-serif;
-        background-color: #f3efe8;
+        background-color: #f8f4ee;
       }
       .font-cinzel { font-family: 'Cinzel', serif; }
       .font-mincho { font-family: 'Shippori Mincho', serif; }
@@ -109,10 +104,10 @@
         to { opacity: 1; transform: translateY(0); }
       }
       .stroke-text {
-        -webkit-text-stroke: 1px #b78829;
+        -webkit-text-stroke: 1px #c8a17b;
         color: transparent;
       }
-      ::selection { background: #eae4d9; color: #221a10; }
+      ::selection { background: #eadbc9; color: #2a2016; }
     </style>
     <link rel="stylesheet" href="./index.css">
   </head>

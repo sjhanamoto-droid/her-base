@@ -17,9 +17,9 @@ const Flow: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-12 mt-14 md:border-l border-ink/10">
           {steps.map((step, idx) => (
             <div key={idx} className="flex flex-col md:border-r border-ink/10 px-8 md:px-10">
-              <span className="font-display text-4xl md:text-5xl text-oak-400 mb-6">0{idx + 1}</span>
+              <span className="font-display text-4xl md:text-5xl text-brand-500 mb-6">0{idx + 1}</span>
               <h4 className="font-serif text-lg font-semibold text-ink mb-3">{step.title}</h4>
-              <p className="text-sm text-stone-500 leading-[1.9]">{step.desc}</p>
+              <p className="text-sm text-ink-500 leading-[1.9]">{step.desc}</p>
             </div>
           ))}
         </div>

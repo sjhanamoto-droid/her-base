@@ -66,11 +66,11 @@ const Members: React.FC = () => {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         <AnimatedSection direction="up" delay={0.1}>
           <div className="text-center mb-16 md:mb-20">
-            <p className="font-display tracking-[0.35em] text-oak-600 text-sm mb-5 uppercase">Member</p>
+            <p className="font-display tracking-[0.35em] text-brand-700 text-sm mb-5 uppercase">Member</p>
             <h2 className="font-serif text-3xl md:text-4xl font-semibold text-ink tracking-[0.06em]">
               私たちが、あなたに伴走します。
             </h2>
-            <span className="block w-10 h-px bg-oak-500/60 mx-auto mt-7"></span>
+            <span className="block w-10 h-px bg-brand-500/60 mx-auto mt-7"></span>
           </div>
         </AnimatedSection>
 
@@ -79,7 +79,7 @@ const Members: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center mb-16 md:mb-20">
             <div className="lg:col-span-5">
               <div className="relative max-w-[380px] mx-auto lg:mx-0">
-                <div className="absolute -top-3 -left-3 md:-top-4 md:-left-4 w-full h-full border border-oak-500/50 pointer-events-none"></div>
+                <div className="absolute -top-3 -left-3 md:-top-4 md:-left-4 w-full h-full border border-brand-500/50 pointer-events-none"></div>
                 <div className="overflow-hidden">
                   <img
                     src={`/images/photo/member/${rep.file}.jpg`}
@@ -90,13 +90,13 @@ const Members: React.FC = () => {
               </div>
             </div>
             <div className="lg:col-span-7">
-              <p className="font-display tracking-[0.3em] text-oak-600 text-xs uppercase mb-4">{rep.roleEn}</p>
-              <p className="text-stone-500 text-sm mb-2">{rep.roleJp}</p>
+              <p className="font-display tracking-[0.3em] text-brand-700 text-xs uppercase mb-4">{rep.roleEn}</p>
+              <p className="text-ink-500 text-sm mb-2">{rep.roleJp}</p>
               <div className="flex items-baseline gap-4 mb-7">
                 <h3 className="font-serif text-3xl md:text-4xl font-semibold text-ink">{rep.name}</h3>
-                <span className="font-display text-oak-500 text-base md:text-lg tracking-[0.15em] uppercase">{rep.romaji}</span>
+                <span className="font-display text-brand-600 text-base md:text-lg tracking-[0.15em] uppercase">{rep.romaji}</span>
               </div>
-              <p className="text-stone-600 leading-[2.1] text-[0.95rem] md:text-base max-w-xl">{rep.intro}</p>
+              <p className="text-ink-600 leading-[2.1] text-[0.95rem] md:text-base max-w-xl">{rep.intro}</p>
             </div>
           </div>
         </AnimatedSection>
@@ -113,11 +113,11 @@ const Members: React.FC = () => {
                     className="w-full aspect-[3/4] object-cover object-top"
                   />
                 </div>
-                <p className="font-display tracking-[0.2em] text-oak-600 text-[0.7rem] uppercase mb-2">{m.roleEn}</p>
-                <p className="text-stone-500 text-xs mb-2 leading-relaxed">{m.roleJp}</p>
+                <p className="font-display tracking-[0.2em] text-brand-700 text-[0.7rem] uppercase mb-2">{m.roleEn}</p>
+                <p className="text-ink-500 text-xs mb-2 leading-relaxed">{m.roleJp}</p>
                 <h3 className="font-serif text-xl font-semibold text-ink mb-1">{m.name}</h3>
-                <p className="font-display text-oak-500 text-xs tracking-[0.12em] uppercase mb-4">{m.romaji}</p>
-                <p className="text-stone-600 leading-[1.9] text-sm">{m.intro}</p>
+                <p className="font-display text-brand-600 text-xs tracking-[0.12em] uppercase mb-4">{m.romaji}</p>
+                <p className="text-ink-600 leading-[1.9] text-sm">{m.intro}</p>
               </div>
             </AnimatedSection>
           ))}

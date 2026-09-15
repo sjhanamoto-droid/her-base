@@ -25,22 +25,22 @@ const LegalModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
       <div className="absolute inset-0 bg-ink/70 backdrop-blur-sm" onClick={onClose}></div>
-      <div className="relative bg-cream-50 max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-2xl">
-        <div className="sticky top-0 bg-cream-50 border-b border-black/10 px-8 py-5 flex justify-between items-center z-10">
+      <div className="relative bg-base-50 max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-2xl">
+        <div className="sticky top-0 bg-base-50 border-b border-ink/10 px-8 py-5 flex justify-between items-center z-10">
           <h3 className="font-serif text-xl md:text-2xl font-bold text-ink">特定商取引法に基づく表記</h3>
-          <button onClick={onClose} className="text-stone-500 hover:text-gold-600 transition-colors" aria-label="close">
+          <button onClick={onClose} className="text-ink-500 hover:text-brand-700 transition-colors" aria-label="close">
             <X className="w-6 h-6" />
           </button>
         </div>
         <div className="p-8">
-          <p className="text-xs text-stone-500 mb-6 bg-cream-100 border border-gold-200 px-4 py-3 rounded">
+          <p className="text-xs text-ink-500 mb-6 bg-brand-50 border border-brand-200 px-4 py-3 rounded">
             本サービスは現在準備中です。有料サービスの提供開始にあわせて、以下の内容を確定・掲載いたします。
           </p>
-          <dl className="divide-y divide-black/10">
+          <dl className="divide-y divide-ink/10">
             {rows.map((r, i) => (
               <div key={i} className="py-4 grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4">
                 <dt className="text-sm font-bold text-ink font-cinzel sm:col-span-1">{r.label}</dt>
-                <dd className="text-sm text-stone-600 leading-relaxed sm:col-span-2">{r.value}</dd>
+                <dd className="text-sm text-ink-600 leading-relaxed sm:col-span-2">{r.value}</dd>
               </div>
             ))}
           </dl>

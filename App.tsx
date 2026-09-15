@@ -16,7 +16,7 @@ import PreparationNotice from './components/PreparationNotice';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-base-100 text-stone-800 antialiased overflow-x-hidden">
+    <div className="min-h-screen bg-base-100 text-ink antialiased overflow-x-hidden">
       <Header />
       <main>
         <Hero />

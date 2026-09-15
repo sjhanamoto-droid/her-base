@@ -44,24 +44,24 @@ const PrivacyModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
       <div className="absolute inset-0 bg-ink/70 backdrop-blur-sm" onClick={onClose}></div>
-      <div className="relative bg-cream-50 max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-2xl">
-        <div className="sticky top-0 bg-cream-50 border-b border-black/10 px-8 py-5 flex justify-between items-center z-10">
+      <div className="relative bg-base-50 max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-2xl">
+        <div className="sticky top-0 bg-base-50 border-b border-ink/10 px-8 py-5 flex justify-between items-center z-10">
           <h3 className="font-serif text-xl md:text-2xl font-bold text-ink">プライバシーポリシー</h3>
-          <button onClick={onClose} className="text-stone-500 hover:text-gold-600 transition-colors" aria-label="close">
+          <button onClick={onClose} className="text-ink-500 hover:text-brand-700 transition-colors" aria-label="close">
             <X className="w-6 h-6" />
           </button>
         </div>
         <div className="p-8 space-y-6">
-          <p className="text-stone-600 text-sm leading-relaxed">
+          <p className="text-ink-600 text-sm leading-relaxed">
             {SITE_NAME} は、お客様の個人情報を尊重し、その保護の重要性を認識したうえで、以下の方針に基づき適切に取り扱います。
           </p>
           {sections.map((s, i) => (
             <div key={i}>
               <h4 className="font-bold text-ink mb-2 font-cinzel text-sm tracking-wide">{s.title}</h4>
-              <p className="text-stone-600 text-sm leading-relaxed">{s.body}</p>
+              <p className="text-ink-600 text-sm leading-relaxed">{s.body}</p>
             </div>
           ))}
-          <p className="text-xs text-stone-400 pt-4 border-t border-black/10">制定日：サービス提供開始時に定めます</p>
+          <p className="text-xs text-ink-400 pt-4 border-t border-ink/10">制定日：サービス提供開始時に定めます</p>
         </div>
       </div>
     </div>

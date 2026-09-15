@@ -28,9 +28,15 @@ const Header: React.FC = () => {
         }`}
       >
         <div className="max-w-[1760px] mx-auto px-6 lg:px-12 flex justify-between items-center">
-          {/* Logo */}
-          <a href="#top" className="font-display text-[1.45rem] md:text-[1.7rem] tracking-[0.3em] text-ink leading-none">
-            HERBASE
+          {/* Logo（横組み：ヘッダー用。差し替えは /public/images/logo/ 内の SVG を置き換える） */}
+          <a href="#top" className="block leading-none" aria-label="HER BASE">
+            <img
+              src="/images/logo/herbase-logo-horizontal.svg"
+              alt="HER BASE"
+              className="h-10 md:h-12 w-auto"
+              width="1664"
+              height="477"
+            />
           </a>
 
           {/* Desktop Nav */}
@@ -48,7 +54,7 @@ const Header: React.FC = () => {
               href={PREREGISTER_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-ink text-base-50 px-7 py-3 text-xs tracking-[0.22em] hover:bg-ink/80 transition-colors"
+              className="bg-brand-500 text-ink px-7 py-3 text-xs tracking-[0.22em] hover:bg-ink hover:text-base-50 transition-colors"
             >
               お問い合わせ
             </a>
@@ -64,7 +70,13 @@ const Header: React.FC = () => {
       {/* Mobile Nav Overlay */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-40 bg-base-100 flex flex-col pt-28 px-8">
-          <p className="font-display text-2xl tracking-[0.3em] text-ink text-center mb-10">HERBASE</p>
+          <img
+            src="/images/logo/herbase-logo.svg"
+            alt="HER BASE"
+            className="h-28 w-auto mx-auto mb-10"
+            width="637"
+            height="639"
+          />
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -81,7 +93,7 @@ const Header: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block text-center w-full bg-ink text-base-50 py-4 text-sm tracking-[0.22em]"
+              className="block text-center w-full bg-brand-500 text-ink py-4 text-sm tracking-[0.22em]"
             >
               お問い合わせ
             </a>

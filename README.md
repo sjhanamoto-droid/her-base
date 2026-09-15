@@ -2,7 +2,7 @@
 
 アスリートを支える人のための、審査制クローズドコミュニティ「HER BASE」のランディングページ。同じ立場の仲間と安心してつながり、孤独を感じず前向きな一歩を踏み出せる居場所を届けます。
 
-`first-class_LP` のデザイン・レイアウトをベースに、HER BASE のロゴ（ゴールド × アイボリー × クラシックセリフ）の世界観へ再構築したものです。**Vercel** で公開する前提で構成しています。
+`first-class_LP` のデザイン・レイアウトをベースに、HER BASE のロゴ（ゴールドベージュ #C8A17B × 白 × クラシックセリフ）の世界観へ再構築したものです。**Vercel** で公開する前提で構成しています。
 
 ## 技術スタック
 
@@ -49,9 +49,29 @@ Hero → Concept（課題提起＋3つの柱：安心／つながり／一歩）
 - **代表挨拶の写真**: `public/images/photo/ceo.jpg`
 - **文言**: 各 `components/*.tsx`
 
+## ロゴ・配色
+
+確定ロゴは Google Drive `HER BASE/10_ロゴ/` の `HERBASELOGO_260910`（AI / PDF / PNG）。サイト用アセットは PDF から書き出したベクターです。
+
+- `public/images/logo/herbase-logo.svg`（縦組み・ゴールド）／`herbase-logo-white.svg`（白）
+- `public/images/logo/herbase-logo-horizontal.svg`（横組み・ゴールド）／`-white.svg`
+  — ヘッダーやヒーロー用に、公式のマークとワードマークを横に並べた Web 向けアレンジ
+- `public/images/logo/herbase-mark.svg`／`herbase-mark-white.svg`（H マークのみ）
+- `public/images/logo.png`（縦組み・ゴールド・透過 PNG）
+- favicon 各種（`public/favicon.svg`, `favicon-*.png`, `apple-touch-icon.png`）はゴールド地 × 白マーク
+- `public/og-image.png`（1200×630、ゴールド地 × 白ロゴ）。`index.html` の OGP は `https://her-base.com/` を前提
+
+配色は `index.html` の Tailwind 設定で定義しています。
+
+| トークン | 用途 |
+| --- | --- |
+| `brand-500` `#c8a17b` | ロゴの色そのもの。ボタン地・罫線・アイコン・Join セクションの背景 |
+| `brand-700` `#8a6742` | 英字ラベルなど小さな文字のアクセント（生成り地でコントラスト確保） |
+| `base-100` `#f8f4ee` | ページ背景（生成り） |
+| `ink` `#2a2016` / `ink-600` `#5e4d3c` | 見出し／本文のダークブラウン |
+
 ## 画像について
 
-- ロゴは背景を透過処理し `public/images/logo.png`、favicon 各種は `public/` に生成済み。
 - 掲載写真は Web 表示用に圧縮・リサイズ済みです。
   **圧縮前のオリジナルは `photo-originals/`（デプロイ対象外）にバックアップしています。**
 

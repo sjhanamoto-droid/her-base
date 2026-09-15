@@ -10,7 +10,7 @@ const AnimatedBackgroundGradient: React.FC = () => {
         ref={elementRef}
         className="absolute inset-0 opacity-20"
         style={{
-          background: 'linear-gradient(45deg, #b78829, #9e7323, #7d591f, #523c1b)',
+          background: 'linear-gradient(45deg, #c8a17b, #ad8660, #8a6742, #4a3826)',
           backgroundSize: '400% 400%',
           animation: isVisible ? 'gradientShift 15s ease infinite' : 'none',
         }}

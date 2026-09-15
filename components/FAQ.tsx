@@ -47,11 +47,11 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, ans
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="flex items-baseline text-ink font-medium text-[0.95rem] md:text-base">
-          <span className="font-display text-oak-600 mr-4 text-lg leading-none">Q.</span>
+          <span className="font-display text-brand-700 mr-4 text-lg leading-none">Q.</span>
           {question}
         </span>
         <Plus
-          className={`w-5 h-5 flex-shrink-0 text-oak-600 transition-transform duration-300 ${isOpen ? 'rotate-45' : ''}`}
+          className={`w-5 h-5 flex-shrink-0 text-brand-700 transition-transform duration-300 ${isOpen ? 'rotate-45' : ''}`}
           strokeWidth={1.5}
         />
       </button>
@@ -60,8 +60,8 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, ans
           isOpen ? 'max-h-96 pb-6 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <p className="text-stone-600 text-sm leading-[2] pl-8 pr-2 whitespace-pre-line">
-          <span className="font-display text-oak-600 mr-3">A.</span>
+        <p className="text-ink-600 text-sm leading-[2] pl-8 pr-2 whitespace-pre-line">
+          <span className="font-display text-brand-700 mr-3">A.</span>
           {answer}
         </p>
       </div>
