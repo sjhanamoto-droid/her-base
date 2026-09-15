@@ -8,8 +8,21 @@ import { SITE_NAME } from '../constants';
  * 2) × で閉じたあとも、右上に「内容が変更される可能性があります」の
  *    アラートを常時表示し続ける。
  */
-const PreparationNotice: React.FC = () => {
-  const [isModalOpen, setIsModalOpen] = useState(true);
+interface PreparationNoticeProps {
+  /** true になった時点で初回モーダルを開く（イントロ動画の終了後） */
+  active?: boolean;
+}
+
+const PreparationNotice: React.FC<PreparationNoticeProps> = ({ active = true }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [hasShown, setHasShown] = useState(false);
+
+  useEffect(() => {
+    if (active && !hasShown) {
+      setHasShown(true);
+      setIsModalOpen(true);
+    }
+  }, [active, hasShown]);
 
   // モーダル表示中は背面のスクロールを固定する
   useEffect(() => {

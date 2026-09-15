@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Concept from './components/Concept';
@@ -13,13 +13,19 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import StickyCTA from './components/StickyCTA';
 import PreparationNotice from './components/PreparationNotice';
+import IntroAnimation, { type IntroPhase } from './components/IntroAnimation';
 
 const App: React.FC = () => {
+  // 初回ロードのロゴアニメーション：playing → fading（Heroの演出開始）→ done（準備中モーダル表示）
+  const [introPhase, setIntroPhase] = useState<IntroPhase>('playing');
+  const handleIntroPhase = useCallback((phase: IntroPhase) => setIntroPhase(phase), []);
+
   return (
     <div className="min-h-screen bg-base-100 text-ink antialiased overflow-x-hidden">
+      <IntroAnimation onPhaseChange={handleIntroPhase} />
       <Header />
       <main>
-        <Hero />
+        <Hero start={introPhase !== 'playing'} />
         <Message />
         <Voices />
         <Pillars />
@@ -32,7 +38,7 @@ const App: React.FC = () => {
       </main>
       <Footer />
       <StickyCTA />
-      <PreparationNotice />
+      <PreparationNotice active={introPhase === 'done'} />
     </div>
   );
 };

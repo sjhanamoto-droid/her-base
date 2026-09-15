@@ -2,9 +2,16 @@ import React, { useEffect, useState } from 'react';
 
 const STRIP_WORDS = ['Challenge Together', 'Design Your Life', 'Mindset', 'Life Design', 'Not Alone'];
 
-const Hero: React.FC = () => {
+interface HeroProps {
+  /** false の間は登場演出を待機（イントロ動画の再生中） */
+  start?: boolean;
+}
+
+const Hero: React.FC<HeroProps> = ({ start = true }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  useEffect(() => setIsLoaded(true), []);
+  useEffect(() => {
+    if (start) setIsLoaded(true);
+  }, [start]);
 
   const ease = (d: number) => ({
     opacity: isLoaded ? 1 : 0,

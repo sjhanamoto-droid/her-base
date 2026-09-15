@@ -61,6 +61,8 @@ Hero → Concept（課題提起＋3つの柱：安心／つながり／一歩）
 - favicon 各種（`public/favicon.svg`, `favicon-*.png`, `apple-touch-icon.png`）はゴールド地 × 白マーク
 - `public/og-image.png`（1200×630、ゴールド地 × 白ロゴ）。`index.html` の OGP は `https://her-base.com/` を前提
 
+初回ロード時のロゴアニメーション（`components/IntroAnimation.tsx`）は `public/video/intro.webm`（VP9）と `intro.mp4`（H.264）を再生します。元動画（Dreamina 生成・960×960・約4秒）は `photo-originals/video/` に保管。差し替え時は ffmpeg で音声除去・背景の白補正・30fps 化して同名で置き換えれば反映されます。再生終了／タップ／自動再生不可／`prefers-reduced-motion` のいずれでも閉じ、その後に Hero の登場演出と準備中モーダルが続きます。
+
 配色は `index.html` の Tailwind 設定で定義しています。
 
 | トークン | 用途 |
