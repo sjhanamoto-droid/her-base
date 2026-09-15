@@ -22,13 +22,13 @@ const Button: React.FC<ButtonProps> = ({
     'inline-flex items-center justify-center border transition-all duration-300 tracking-[0.18em] font-medium group';
 
   const variants = {
-    // gold: ロゴのゴールドベージュ地（主要CTA）
-    gold: 'bg-brand-500 text-ink border-brand-500 hover:bg-ink hover:text-base-50 hover:border-ink',
-    ink: 'bg-ink text-base-50 border-ink hover:bg-brand-500 hover:text-ink hover:border-brand-500',
+    // gold: ロゴと同系色の濃いゴールド地 × 白文字（主要CTA）
+    gold: 'bg-brand-700 text-white border-brand-700 hover:bg-ink hover:text-base-50 hover:border-ink',
+    ink: 'bg-ink text-base-50 border-ink hover:bg-brand-700 hover:text-white hover:border-brand-700',
     outline: 'bg-transparent border-ink/60 text-ink hover:bg-ink hover:text-base-50',
-    outlineLight: 'bg-transparent border-base-50/70 text-base-50 hover:bg-base-50 hover:text-ink',
-    // cream: ゴールド地のセクション上で使う白ボタン
-    cream: 'bg-base-50 text-ink border-base-50 hover:bg-ink hover:text-base-50 hover:border-ink',
+    outlineLight: 'bg-transparent border-white/70 text-white hover:bg-white hover:text-brand-800',
+    // cream: 濃いゴールド地のセクション上で使う白ボタン（hoverで白抜きに）
+    cream: 'bg-base-50 text-brand-800 border-base-50 hover:bg-transparent hover:text-white hover:border-white',
   };
 
   const sizes = {

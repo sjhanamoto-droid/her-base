@@ -80,7 +80,7 @@ const PreparationNotice: React.FC<PreparationNoticeProps> = ({ active = true }) 
 
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="inline-flex items-center justify-center bg-brand-500 text-ink px-8 py-3 text-sm tracking-[0.2em] hover:bg-ink hover:text-base-50 transition-colors"
+                className="inline-flex items-center justify-center bg-brand-700 text-white px-8 py-3 text-sm tracking-[0.2em] hover:bg-ink hover:text-base-50 transition-colors"
               >
                 サイトを見る
               </button>

@@ -99,7 +99,7 @@ const Hero: React.FC<HeroProps> = ({ start = true }) => {
             <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-5" style={ease(0.75)}>
               <a
                 href="#join"
-                className="group inline-flex items-center justify-between gap-6 whitespace-nowrap bg-brand-500 text-ink px-8 py-4 text-[0.8rem] tracking-[0.15em] hover:bg-ink hover:text-base-50 transition-colors"
+                className="group inline-flex items-center justify-between gap-6 whitespace-nowrap bg-brand-700 text-white px-8 py-4 text-[0.8rem] tracking-[0.15em] hover:bg-ink hover:text-base-50 transition-colors"
               >
                 ご相談はこちら
                 <span className="transition-transform duration-300 group-hover:translate-x-1.5">→</span>

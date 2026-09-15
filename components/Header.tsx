@@ -54,7 +54,7 @@ const Header: React.FC = () => {
               href={PREREGISTER_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-brand-500 text-ink px-7 py-3 text-xs tracking-[0.22em] hover:bg-ink hover:text-base-50 transition-colors"
+              className="bg-brand-700 text-white px-7 py-3 text-xs tracking-[0.22em] hover:bg-ink hover:text-base-50 transition-colors"
             >
               お問い合わせ
             </a>
@@ -93,7 +93,7 @@ const Header: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block text-center w-full bg-brand-500 text-ink py-4 text-sm tracking-[0.22em]"
+              className="block text-center w-full bg-brand-700 text-white py-4 text-sm tracking-[0.22em]"
             >
               お問い合わせ
             </a>

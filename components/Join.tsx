@@ -10,24 +10,24 @@ const perks = [
 
 const Join: React.FC = () => {
   return (
-    <section id="join" className="bg-brand-500 text-ink py-24 md:py-32">
+    <section id="join" className="bg-brand-700 text-base-50 py-24 md:py-32">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         <div className="mb-16 text-center">
-          <p className="font-display tracking-[0.35em] text-ink/60 text-sm uppercase mb-5">Contact</p>
-          <h2 className="font-display text-5xl md:text-7xl tracking-[0.12em] uppercase mb-5 text-base-50">Join</h2>
-          <p className="text-ink/70 text-sm md:text-base">アスリートを支える、あなたのご参加をお待ちしています。</p>
+          <p className="font-display tracking-[0.35em] text-brand-200 text-sm uppercase mb-5">Contact</p>
+          <h2 className="font-display text-5xl md:text-7xl tracking-[0.12em] uppercase mb-5 text-white">Join</h2>
+          <p className="text-brand-50 text-sm md:text-base">アスリートを支える、あなたのご参加をお待ちしています。</p>
         </div>
 
-        <div className="max-w-4xl mx-auto border border-base-50/60">
+        <div className="max-w-4xl mx-auto border border-white/40">
           <div className="grid grid-cols-1 md:grid-cols-2">
             {/* Left */}
-            <div className="p-10 md:p-14 border-b md:border-b-0 md:border-r border-base-50/60 flex flex-col justify-center">
-              <span className="inline-block self-start border border-ink/50 text-ink text-[0.65rem] tracking-[0.25em] px-3 py-1.5 uppercase font-display mb-7">
+            <div className="p-10 md:p-14 border-b md:border-b-0 md:border-r border-white/40 flex flex-col justify-center">
+              <span className="inline-block self-start border border-white/70 text-white text-[0.65rem] tracking-[0.25em] px-3 py-1.5 uppercase font-display mb-7">
                 Now Accepting
               </span>
-              <h3 className="font-serif text-2xl md:text-3xl font-semibold mb-5">お気軽にご相談ください</h3>
-              <p className="text-ink/75 leading-[2] text-sm md:text-[0.95rem]">
-                HERBASE は現在<span className="text-ink font-bold">サービスの準備中</span>です。
+              <h3 className="font-serif text-2xl md:text-3xl font-semibold mb-5 text-white">お気軽にご相談ください</h3>
+              <p className="text-brand-50 leading-[2] text-sm md:text-[0.95rem]">
+                HERBASE は現在<span className="text-white font-bold">サービスの準備中</span>です。
                 様々な方、アスリートの妻や奥様のご意見やご相談、お悩みなどを幅広く知りたいので、
                 ぜひ Instagram の DM から今の気持ちやお悩みをお聞かせください。
               </p>
@@ -35,12 +35,12 @@ const Join: React.FC = () => {
 
             {/* Right */}
             <div className="p-10 md:p-14 flex flex-col justify-center">
-              <p className="font-display tracking-[0.3em] text-ink/60 text-sm uppercase mb-7">About the Interview</p>
+              <p className="font-display tracking-[0.3em] text-brand-200 text-sm uppercase mb-7">About the Interview</p>
               <ul className="space-y-4">
                 {perks.map((p, i) => (
                   <li key={i} className="flex items-start">
-                    <Check className="w-4 h-4 text-base-50 mr-3 mt-1 flex-shrink-0" strokeWidth={2} />
-                    <span className="text-ink/85 text-sm md:text-[0.95rem] leading-[1.9]">{p}</span>
+                    <Check className="w-4 h-4 text-white mr-3 mt-1 flex-shrink-0" strokeWidth={2} />
+                    <span className="text-brand-50 text-sm md:text-[0.95rem] leading-[1.9]">{p}</span>
                   </li>
                 ))}
               </ul>
@@ -54,7 +54,7 @@ const Join: React.FC = () => {
               InstagramのDMでご相談
             </Button>
           </a>
-          <p className="mt-5 text-xs md:text-sm text-ink/60">
+          <p className="mt-5 text-xs md:text-sm text-brand-100">
             Instagram（@her_base）が開きます。DMからお気軽にご相談ください（ご相談・面談は無料です）
           </p>
         </div>
