@@ -120,9 +120,9 @@ const IntroAnimation: React.FC<IntroAnimationProps> = ({ onPhaseChange }) => {
         ref={videoRef}
         className="block shrink-0 max-w-none object-cover"
         style={{
-          // PC は高さいっぱい、スマホは横幅より少し大きく（縁は白なのではみ出してよい。shrink-0 / max-w-none で flex と preflight の max-width:100% による縮小を防ぐ）
-          width: 'min(130vw, 100vh)',
-          height: 'min(130vw, 100vh)',
+          // PC は画面高さの 7 割、スマホは横幅いっぱい（ロゴ自体は動画フレームの約 6 割なので、実際のロゴはさらに小さく見える。shrink-0 / max-w-none で flex と preflight の max-width:100% による縮小を防ぐ）
+          width: 'min(100vw, 70vh)',
+          height: 'min(100vw, 70vh)',
           // 正方形の縁を白に溶かす
           WebkitMaskImage: 'radial-gradient(circle closest-side, #000 84%, transparent 100%)',
           maskImage: 'radial-gradient(circle closest-side, #000 84%, transparent 100%)',
