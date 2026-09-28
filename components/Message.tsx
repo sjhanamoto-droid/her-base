@@ -1,6 +1,7 @@
 import React from 'react';
+import { ArrowRight } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
-import { REP_TITLE, REP_NAME } from '../constants';
+import { COMPANY_PATH, REP_TITLE, REP_NAME } from '../constants';
 
 const Message: React.FC = () => {
   return (
@@ -48,6 +49,12 @@ const Message: React.FC = () => {
               <p className="font-display text-brand-700 text-xs tracking-[0.3em] uppercase mb-2">{REP_TITLE}</p>
               <p className="font-serif text-2xl md:text-3xl font-semibold text-ink">{REP_NAME}</p>
             </div>
+            <a
+              href={COMPANY_PATH}
+              className="inline-flex items-center justify-between gap-6 mt-10 border border-ink/20 px-6 py-4 text-sm tracking-[0.1em] text-ink hover:border-brand-700 hover:text-brand-700 transition-colors"
+            >
+              運営会社について <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
+            </a>
           </AnimatedSection>
         </div>
       </div>
