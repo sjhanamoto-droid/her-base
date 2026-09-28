@@ -2,18 +2,19 @@ import React, { useState } from 'react';
 import { Instagram } from 'lucide-react';
 import LegalModal from './LegalModal';
 import PrivacyModal from './PrivacyModal';
+import { COMPANY, COMPANY_PATH } from '../constants';
 
 const Footer: React.FC = () => {
   const [isLegalOpen, setIsLegalOpen] = useState(false);
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
 
   const menu = [
-    { label: 'HERBASEについて', href: '#concept' },
-    { label: 'コンセプト', href: '#concept' },
-    { label: 'ご入会について', href: '#membership' },
-    { label: '共通の悩み', href: '#voice' },
-    { label: 'ご入会までの流れ', href: '#flow' },
-    { label: 'よくある質問', href: '#faq' },
+    { label: 'HERBASEについて', href: '/#concept' },
+    { label: 'ご入会について', href: '/#membership' },
+    { label: '共通の悩み', href: '/#voice' },
+    { label: 'ご入会までの流れ', href: '/#flow' },
+    { label: 'よくある質問', href: '/#faq' },
+    { label: '運営会社', href: COMPANY_PATH },
   ];
 
   return (
@@ -91,6 +92,7 @@ const Footer: React.FC = () => {
           <p className="text-[0.65rem] tracking-[0.25em] uppercase text-ink-400 font-display">
             &copy; 2026 HERBASE. All Rights Reserved.
           </p>
+          <p className="text-[0.7rem] text-ink-400 mt-2">運営：{COMPANY.name}</p>
         </div>
       </div>
     </footer>

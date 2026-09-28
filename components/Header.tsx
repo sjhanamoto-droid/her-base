@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { PREREGISTER_URL } from '../constants';
+import { COMPANY_PATH, PREREGISTER_URL } from '../constants';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -12,10 +12,12 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // 会社概要ページからも移動できるよう、LP内リンクは "/#〇〇" で指定する
   const navLinks = [
-    { name: 'メッセージ', href: '#message' },
-    { name: 'HERBASEについて', href: '#concept' },
-    { name: 'よくある質問', href: '#faq' },
+    { name: 'メッセージ', href: '/#message' },
+    { name: 'HERBASEについて', href: '/#concept' },
+    { name: 'よくある質問', href: '/#faq' },
+    { name: '運営会社', href: COMPANY_PATH },
   ];
 
   return (
@@ -29,7 +31,7 @@ const Header: React.FC = () => {
       >
         <div className="max-w-[1760px] mx-auto px-6 lg:px-12 flex justify-between items-center">
           {/* Logo（横組み：ヘッダー用。差し替えは /public/images/logo/ 内の SVG を置き換える） */}
-          <a href="#top" className="block leading-none" aria-label="HER BASE">
+          <a href="/" className="block leading-none" aria-label="HER BASE">
             <img
               src="/images/logo/herbase-logo-horizontal.svg"
               alt="HER BASE"

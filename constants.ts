@@ -15,3 +15,13 @@ export const PREREGISTER_URL = 'https://www.instagram.com/her_base';
 
 // ページ内のご相談セクションへスクロール
 export const JOIN_ANCHOR = '#join';
+
+// 運営会社（会社概要ページ /company に掲載）
+export const COMPANY = {
+  name: '合同会社WillowLife',
+  address: '〒732-0066 広島県広島市東区牛田本町2丁目1番2-1301号',
+  business: ['アスリート支援', 'アスリートの家族の人生を支えるためのライフサポート事業'],
+};
+
+// 会社概要ページのパス
+export const COMPANY_PATH = '/company';
