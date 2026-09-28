@@ -25,3 +25,25 @@ html {
     scroll-behavior: auto !important;
   }
 }
+
+/* 「共通の悩み」セクション背景の光の塊（右上→左下へゆっくり漂う） */
+.voices-glow {
+  will-change: transform;
+}
+
+@keyframes voicesDriftA {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(-6%, 8%) scale(1.08); }
+  100% { transform: translate(-12%, 4%) scale(0.96); }
+}
+
+@keyframes voicesDriftB {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(-14%, 12%) scale(1.12); }
+  100% { transform: translate(-8%, 22%) scale(1); }
+}
+
+@keyframes voicesDriftC {
+  0%   { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(10%, -12%) scale(1.1); }
+}
