@@ -10,30 +10,30 @@ const concerns = [
 const Voices: React.FC = () => {
   return (
     <section id="voice" className="relative isolate overflow-hidden py-24 md:py-32 border-b border-ink/10 bg-base-100">
-      {/* 背景：右上の余白から左下へ流れる、淡いローズ〜ピーチのグラデーション。光の塊がゆっくり漂う */}
+      {/* 背景：右上の余白から左下へ流れる、サイトの配色（brand/base）に沿った淡いベージュのグラデーション。光の塊がゆっくり漂う */}
       <div aria-hidden="true" className="absolute inset-0 -z-10 pointer-events-none">
         <div
           className="absolute inset-0"
-          style={{ background: 'linear-gradient(to bottom left, #f4e1da 0%, #f6e9e0 30%, #f8f2eb 60%, #f8f4ee 85%)' }}
+          style={{ background: 'linear-gradient(to bottom left, #f1e7da 0%, #f4ece2 35%, #f8f4ee 75%)' }}
         ></div>
         <div
           className="voices-glow absolute -top-[25%] -right-[15%] w-[85vw] max-w-[1100px] aspect-square rounded-full"
           style={{
-            background: 'radial-gradient(circle, rgba(236,196,188,0.6) 0%, rgba(236,196,188,0.25) 40%, rgba(236,196,188,0) 70%)',
+            background: 'radial-gradient(circle, rgba(234,219,201,0.55) 0%, rgba(234,219,201,0.2) 40%, rgba(234,219,201,0) 70%)',
             animation: 'voicesDriftA 18s ease-in-out infinite alternate',
           }}
         ></div>
         <div
           className="voices-glow absolute top-[10%] right-[5%] w-[60vw] max-w-[800px] aspect-square rounded-full"
           style={{
-            background: 'radial-gradient(circle, rgba(223,198,170,0.55) 0%, rgba(223,198,170,0.2) 45%, rgba(223,198,170,0) 70%)',
+            background: 'radial-gradient(circle, rgba(223,198,170,0.28) 0%, rgba(223,198,170,0.1) 45%, rgba(223,198,170,0) 70%)',
             animation: 'voicesDriftB 24s ease-in-out infinite alternate',
           }}
         ></div>
         <div
           className="voices-glow absolute -bottom-[20%] left-[20%] w-[55vw] max-w-[700px] aspect-square rounded-full"
           style={{
-            background: 'radial-gradient(circle, rgba(241,214,207,0.35) 0%, rgba(241,214,207,0) 65%)',
+            background: 'radial-gradient(circle, rgba(240,233,223,0.4) 0%, rgba(240,233,223,0) 65%)',
             animation: 'voicesDriftC 30s ease-in-out infinite alternate',
           }}
         ></div>
